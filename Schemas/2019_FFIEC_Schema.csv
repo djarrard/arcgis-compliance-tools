@@ -1,0 +1,1248 @@
+Index,Description,Max Length,Data Type,Data Source,Source Field
+1,Key field.  HMDA/CRA collection year,4,AN,Other,
+2,Key field.  MSA/MD Code,5,AN,Other,
+3,Key field.  FIPS state code,2,AN,Other,
+4,Key field.  FIPS county code,3,AN,Other,
+5,Key field.  Census tract. Implied decimal point.,6,AN,Other,
+6,Principal city flag. 0=not principal city  1=principal city,1,AN,Other,
+7,Small county flag. T=tract record  S=small county  I=Island Area,1,AN,Other,
+8,Split tract flag. N=tract number occurs w/in one MA  S=split between MAs,1,AN,Other,
+9,Demographic data flag. X=Tot persons/population or median family income is 0  D=tot persons/population and median family income are not 0   I=Island Area,1,AN,Other,
+10,Urban/rural flag. U=urban R=rural  M=mixed  I=Island Area,1,AN,Other,
+11,Median Family Income of MSA in which tract resides,8,N,ACS, B19113_1 at MSA level or calculated from B19101 As necessary
+12,Median Household Income of MSA in which tract resides,8,N,ACS, B19013_1 at MSA level or calculated from B19001 As necessary
+13,"Tract median family income as a percentage of the MSA/MD median family income. Two decimal places, truncated.",6,"Decimal(6,2)",Other,
+14,FFIEC Estimated MSA/MD Median Family Income ,8,N,Other,
+15,Total persons,8,N,ACS,B01001_1
+16,Total families,8,N,ACS,B19101_1
+17,Total households,8,N,ACS,B19001_1
+18,Total female population,8,N,ACS,B01001_26
+19,Total male population,8,N,ACS,B01001_2
+20,Total population minus white alone population,8,N,ACS,B03002_1-B03002_3
+21,Minority population as percent of tract population rounded to two decimal places,6,N,ACS,When B03002_1 is 0 then 0. Else (B03002_1-B03002_3)*100.00/B03002_1
+22,Total population Hispanic and Non-Hispanic,8,N,ACS,B03002_1
+23,Total population Hispanic only,8,N,ACS,B03002_12
+24,Total population Non-Hispanic,8,N,ACS,B03002_2
+25,Total population Non-Hispanic one race,8,N,ACS,B03002_2 - B03002_9
+26,Total population Non-Hispanic White,8,N,ACS,B03002_3
+27,Total population Non-Hispanic Black/African American,8,N,ACS,B03002_4
+28,Total population Non-Hispanic American Indian/Alaska Native,8,N,ACS,B03002_5
+29,Total population Non-Hispanic Asian,8,N,ACS,B03002_6
+30,Total population Non-Hispanic Native Hawaiian/other Pacific Islander,8,N,ACS,B03002_7
+31,Total population Non-Hispanic some other race,8,N,ACS,B03002_8
+32,Total population Non-Hispanic two or more races,8,N,ACS,B03002_9
+33,Total population Non-Hispanic exactly two races,8,N,NA,
+34,Total population Non-Hispanic White and Black,8,N,NA,
+35,Total population Non-Hispanic White and American Indian/Alaska Native,8,N,NA,
+36,Total population Non-Hispanic White and Asian,8,N,NA,
+37,Total population Non-Hispanic White and Native Hawaiian Pacific Islander,8,N,NA,
+38,Total population Non-Hispanic White and some other race,8,N,NA,
+39,Total population Non-Hispanic Black and American Indian/Alaska Native,8,N,NA,
+40,OMB civil rights Non-Hispanic Black,8,N,NA,
+41,OMB civil rights Non-Hispanic American Indian/Alaska Native,8,N,NA,
+42,OMB civil rights Non-Hispanic Asian,8,N,NA,
+43,OMB civil rights Non-Hispanic Native Hawaiian Pacific Islander,8,N,NA,
+44,OMB civil rights Non-Hispanic Some Other Race,8,N,NA,
+45,OMB civil rights Non-Hispanic Two or More Races,8,N,NA,
+46,Total population Hispanic by race,8,N,ACS,B03002_12
+47,Total population Hispanic White,8,N,ACS,B03002_13
+48,Total population Hispanic Black/African American,8,N,ACS,B03002_14
+49,Total population Hispanic American Indian/Alaska Native,8,N,ACS,B03002_15
+50,Total population Hispanic Asian,8,N,ACS,B03002_16
+51,Total population Hispanic Native Hawaiian/other Pacific Islander,8,N,ACS,B03002_17
+52,Total population Hispanic some other race,8,N,ACS,B03002_18
+53,Total population Hispanic two or more races,8,N,ACS,B03002_19
+54,Total population by race,8,N,ACS,C02003_1
+55,Total population one race,8,N,ACS,C02003_2
+56,Total population White,8,N,ACS,C02003_3
+57,Total population Black/African American,8,N,ACS,C02003_4
+58,Total population American Indian/Alaska Native,8,N,ACS,C02003_5
+59,Total population Asian,8,N,ACS,C02003_6
+60,Total population Native Hawaiian/other Pacific Islander,8,N,ACS,C02003_7
+61,Total population some other race,8,N,ACS,C02003_8
+62,Total population two or more races,8,N,ACS,C02003_9
+63,Total population exactly two races,8,N,ACS,C02003_12
+64,Total population White and Black,8,N,ACS,C02003_13
+65,Total population White and American Indian/Alaska Native,8,N,ACS,C02003_14
+66,Total population White and Asian,8,N,ACS,C02003_15
+67,Total population White and Native Hawaiian Pacific Islander,8,N,NA,
+68,Total population White and some other race,8,N,NA,
+69,Total population Black and American Indian/Alaska Native,8,N,ACS,C02003_16
+70,OMB civil rights Black,8,N,ACS,C02003_4 + C02003_13
+71,OMB civil rights American Indian/Alaska Native,8,N,ACS,C02003_5 + C02003_14
+72,OMB civil rights Asian,8,N,ACS,C02003_6 + C02003_15
+73,OMB civil rights Native Hawaiian Pacific Islander,8,N,NA,
+74,OMB civil rights Some Other Race,8,N,NA,
+75,OMB civil rights Two or More Races,8,N,NA,
+76,Total population urban and rural,8,N,NA,
+77,Total population urban only,8,N,NA,P0020002 (Island Areas Only)
+78,Total population inside urbanized area,8,N,NA,
+79,Total population inside urban clusters,8,N,NA,
+80,Total population rural only,8,N,NA,P0020005 (Island Areas Only)
+81,Total population farm,8,N,NA,
+82,Total population nonfarm,8,N,NA,
+83,Total population-household type,8,N,ACS,B09019_1
+84,Total population in households,8,N,ACS,B09019_2
+85,Total population in family households,8,N,ACS,B09019_3
+86,Total population householder in family households,8,N,ACS,B09019_4
+87,Total male householders in family households,8,N,ACS,B09019_5
+88,Total female householders in family households,8,N,ACS,B09019_6
+89,Total spouse householder in family households,8,N,ACS,B09019_7
+90,Total children in family households,8,N,ACS,B09019_8
+91,Total natural born children in family households,8,N,ACS,B09019_9
+92,Total adopted children in family households,8,N,ACS,B09019_10
+93,Total step children in family households,8,N,ACS,B09019_11
+94,Total grandchildren in family households,8,N,ACS,B09019_12
+95,Total brothers or sisters in family households,8,N,ACS,B09019_13
+96,Total parents in family households,8,N,ACS,B09019_14
+97,Total other relatives in family households (Parent-in-law + Son-in-law or daughter-in-law + Other relatives),8,N,ACS,B09019_15 + B09019_16 + B09019_17
+98,Total non-relatives in family households,8,N,ACS,B09019_18
+99,Total population in non-family households,8,N,ACS,B09019_24
+100,Total male householders in non-family households,8,N,ACS,B09019_26
+101,Total male householders living alone in non-family households,8,N,ACS,B09019_27
+102,Total male householders not living alone in non-family households,8,N,ACS,B09019_28
+103,Total female householders in non-family households,8,N,ACS,B09019_29
+104,Total female householders living alone in non-family households,8,N,ACS,B09019_30
+105,Total female householders not living alone in non-family households,8,N,ACS,B09019_31
+106,Total nonrelatives in non-family households,8,N,ACS,B09019_32
+107,Total population in group quarters,8,N,ACS,B09019_38
+108,Total institutionalized population,8,N,NA,
+109,"Total civilian non-institutionalized population.  Note:  2015 ACS table does not provide the total non-institutionalized population, but it does provide the total civilian non-institutionalized population.",8,N,ACS,B18101_1
+110,Total population 65 years and over,8,N,ACS,B09020_1
+111,Total population in households - 65 years and over,8,N,ACS,B09020_2
+112,Total population in family households - 65 years and over,8,N,ACS,B09020_3
+113,Total population householder in family households - 65 years and over,8,N,ACS,B09020_4
+114,Total  male householders in family households - 65 years and over,8,N,ACS,B09020_5
+115,Total  female householders in family households - 65 years and over,8,N,ACS,B09020_6
+116,Total spouse householder in family households - 65 years and over,8,N,ACS,B09020_7
+117,Total parents in family households - 65 years and over,8,N,ACS,B09020_8
+118,Total other relatives in family households - 65 years and over (Parent In-Law + Other relatives),8,N,ACS,B09020_9 + B09020_10
+119,Total non-relatives in family households - 65 years and over,8,N,ACS,B09020_11
+120,Total population in non-family households - 65 years and over,8,N,ACS,B09020_12
+121,Total male householders in non-family households  - 65 years and over,8,N,ACS,B09020_14
+122,Total male householders in non-family households living alone - 65 years and over,8,N,ACS,B09020_15
+123,Total male households not living alone in non-family households-65 years and over,8,N,ACS,B09020_16
+124,Total female householders in non-family households  - 65 years and over,8,N,ACS,B09020_17
+125,Total female householders in non-family households living alone - 65 years and over,8,N,ACS,B09020_18
+126,Total female households not living alone in non-family households-65 years and over,8,N,ACS,B09020_19
+127,Total non-relatives in non- family households - 65 years and over,8,N,ACS,B09020_20
+128,Total population in group quarters - 65 years and over,8,N,ACS,B09020_21
+129,Total institutionalized population - 65 years and over,8,N,NA,
+130,Total non-institutionalized population - 65 years and over,8,N,NA,
+131,Total population - sex by age,8,N,ACS,B01001_1
+132,Total male population,8,N,ACS,B01001_2
+133,Total male population under 5 years,8,N,ACS,B01001_3
+134,Total male population 5 to 9 years,8,N,ACS,B01001_4
+135,Total male population 10 to 14 years,8,N,ACS,B01001_5
+136,Total male population 15 to 17years,8,N,ACS,B01001_6
+137,Total male population 18 to 19 years,8,N,ACS,B01001_7
+138,Total male population 20 years,8,N,ACS,B01001_8
+139,Total male population 21 years,8,N,ACS,B01001_9
+140,Total male population 22 to 24 years,8,N,ACS,B01001_10
+141,Total male population 25 to 29 years,8,N,ACS,B01001_11
+142,Total male population 30 to 34 years,8,N,ACS,B01001_12
+143,Total male population 35 to 39 years,8,N,ACS,B01001_13
+144,Total male population 40 to 44 years,8,N,ACS,B01001_14
+145,Total male population 45 to 49 years,8,N,ACS,B01001_15
+146,Total male population 50 to 54 years,8,N,ACS,B01001_16
+147,Total male population 55 to 59 years,8,N,ACS,B01001_17
+148,Total male population 60 to 61 years,8,N,ACS,B01001_18
+149,Total male population 62 to 64 years,8,N,ACS,B01001_19
+150,Total male population 65 to 66 years,8,N,ACS,B01001_20
+151,Total male population 67 to 69 years,8,N,ACS,B01001_21
+152,Total male population 70 to 74 years,8,N,ACS,B01001_22
+153,Total male population 75 to 79 years,8,N,ACS,B01001_23
+154,Total male population 80 to 84 years,8,N,ACS,B01001_24
+155,Total male population 85 years and over,8,N,ACS,B01001_25
+156,Total male population under 15 years,8,N,ACS,B01001_3+B01001_4+B01001_5
+157,Total male population 15 to 17 years,8,N,ACS,B01001_6
+158,Total male population 18 to 24 years,8,N,ACS,B01001_7+B01001_8+B01001_9+B01001_10
+159,Total male population 25 to 39 years,8,N,ACS,B01001_11+B01001_12+B01001_13
+160,Total male population 40 to 49 years,8,N,ACS,B01001_14+B01001_15
+161,Total male population 50 to 61 years,8,n,ACS,B01001_16+B01001_17+B01001_18
+162,Total male population 62 years and over,8,N,ACS,B01001_19+B01001_20+B01001_21+B01001_22+B01001_23+B01001_24+B01001_25
+163,Total male population 65 years and over,8,N,ACS,B01001_20+B01001_21+B01001_22+B01001_23+B01001_24+B01001_25
+164,Total female population,8,N,ACS,B01001_26
+165,Total female population under 5 years,8,N,ACS,B01001_27
+166,Total female population 5 to 9 years,8,N,ACS,B01001_28
+167,Total female population 10 to 14 years,8,N,ACS,B01001_29
+168,Total female population 15 to 17 years,8,N,ACS,B01001_30
+169,Total female population 18 to 19 years,8,N,ACS,B01001_31
+170,Total female population 20 years,8,N,ACS,B01001_32
+171,Total female population 21 years,8,N,ACS,B01001_33
+172,Total female population 22 to 24 years,8,N,ACS,B01001_34
+173,Total female population 25 to 29 years,8,N,ACS,B01001_35
+174,Total female population 30 to 34 years,8,N,ACS,B01001_36
+175,Total female population 35 to 39 years,8,N,ACS,B01001_37
+176,Total female population 40 to 44 years,8,N,ACS,B01001_38
+177,Total female population 45 to 49 years,8,N,ACS,B01001_39
+178,Total female population 50 to 54 years,8,N,ACS,B01001_40
+179,Total female population 55 to 59 years,8,N,ACS,B01001_41
+180,Total female population 60 and 61 years,8,N,ACS,B01001_42
+181,Total female population 62 to 64 years,8,N,ACS,B01001_43
+182,Total female population 65 and 66 years,8,N,ACS,B01001_44
+183,Total female population 67 to 69 years,8,N,ACS,B01001_45
+184,Total female population 70 to 74 years,8,N,ACS,B01001_46
+185,Total female population 75 to 79 years,8,N,ACS,B01001_47
+186,Total female population 80 to 84 years,8,N,ACS,B01001_48
+187,Total female population 85 years and over,8,N,ACS,B01001_49
+188,Total female population under 15 years,8,N,ACS,B01001_27+B01001_28+B01001_29
+189,Total female population 15 to 17 years,8,N,ACS,B01001_30
+190,Total female population 18 to 24 years,8,N,ACS,B01001_31+B01001_32+B01001_33+B01001_34
+191,Total female population 25 to 39 years,8,N,ACS,B01001_35+B01001_36+B01001_37
+192,Total female population 40 to 49 years,8,N,ACS,B01001_38+B01001_39
+193,Total female population 50 to 61 years,8,N,ACS,B01001_40+B01001_41+B01001_42
+194,Total female population 62 years and over,8,N,ACS,B01001_43+B01001_44+B01001_45+B01001_46+B01001_47+B01001_48+B01001_49
+195,Total female population 65 years and over,8,N,ACS,B01001_44+B01001_45+B01001_46+B01001_47+B01001_48+B01001_49
+196,Total male/female population under 5 years,8,N,ACS,B01001_3 + B01001_27
+197,Total male/female population 5 to 9 years,8,N,ACS,B01001_4 + B01001_28
+198,Total male/female population 10 to 14 years,8,N,ACS,B01001_5 + B01001_29
+199,Total male/female population 15 to 17 years,8,N,ACS,B01001_6 + B01001_30
+200,Total male/female population 18 and 19 years,8,N,ACS,B01001_7 + B01001_31
+201,Total male/female population 20 years,8,N,ACS,B01001_8 + B01001_32
+202,Total male/female population 21 years,8,N,ACS,B01001_9 + B01001_33
+203,Total male/female population 22 to 24 years,8,N,ACS,B01001_10 + B01001_34
+204,Total male/female population 25 to 29 years,8,N,ACS,B01001_11 + B01001_35
+205,Total male/female population 30 to 34 years,8,N,ACS,B01001_12 + B01001_36
+206,Total male/female population 35 to 39 years,8,N,ACS,B01001_13 + B01001_37
+207,Total male/female population 40 to 44 years,8,N,ACS,B01001_14 + B01001_38
+208,Total male/female population 45 to 49 years,8,N,ACS,B01001_15 + B01001_39
+209,Total male/female population 50 to 54 years,8,N,ACS,B01001_16 + B01001_40
+210,Total male/female population 55 to 59 years,8,N,ACS,B01001_17 + B01001_41
+211,Total male/female population 60 and 61 years,8,N,ACS,B01001_18 + B01001_42
+212,Total male/female population 62 to 64 years,8,N,ACS,B01001_19 + B01001_43
+213,Total male/female population 65 and 66 years,8,N,ACS,B01001_20 + B01001_44
+214,Total male/female population 67 to 69 years,8,N,ACS,B01001_21 + B01001_45
+215,Total male/female population 70 to 74 years,8,N,ACS,B01001_22 + B01001_46
+216,Total male/female population 75 to 79 years,8,N,ACS,B01001_23 + B01001_47
+217,Total male/female population 80 to 84 years,8,N,ACS,B01001_24 + B01001_48
+218,Total male/female population over 85 years,8,N,ACS,B01001_25 + B01001_49
+219,Total male/female population under 15 years,8,N,ACS,B01001_3+B01001_4+B01001_5+B01001_27+B01001_28+B01001_29
+220,Total male/female population 15 to 17 years,8,N,ACS,B01001_6 + B01001_30
+221,Total male/female population 18-24 years,8,N,ACS,B01001_7+B01001_8+B01001_9+B01001_10+B01001_31+B01001_32+B01001_33+B01001_34
+222,Total male/female population 25-39 years,8,N,ACS,B01001_11+B01001_12+B01001_13+B01001_35+B01001_36+B01001_37
+223,Total male/female population 40-49 years,8,N,ACS,B01001_14+B01001_15+B01001_38+B01001_39
+224,Total male/female population 50-61 years,8,N,ACS,B01001_16+B01001_17+B01001_18+B01001_40+B01001_41+B01001_42
+225,Total male/female population 62 years and over,8,N,ACS,B01001_19+B01001_20+B01001_21+B01001_22+B01001_23+B01001_24+B01001_25+B01001_43+B01001_44+B01001_45+B01001_46+B01001_47+B01001_48+B01001_49
+226,Total male/female population 65 years and over,8,N,ACS,B01001_20+B01001_21+B01001_22+B01001_23+B01001_24+B01001_25+B01001_44+B01001_45+B01001_46+B01001_47+B01001_48+B01001_49
+227,Total male population under 16 = Total Male Population - Population 16 years and over (Male),8,N,ACS,B01001_2-B23001_2
+228,Total female population under 16 = Total Female Population - Population 16 years and over (Female),8,N,ACS,B01001_26-B23001_88
+229,Total male population 16 and 17 years = (Male 17 and under: Under 5 years + 5 to 9 years + 10 to 14 years + 15 to 17 years) - (Total Male population under 16),8,N,ACS,(B01001_3+B01001_4+B01001_5+B01001_6)-(B01001_2-B23001_2)
+230,Total female population 16 and 17 years = (Female 17 and under: Under 5 years + 5 to 9 years + 10 to 14 years + 15 to 17 years) - (Total Female population under 16),8,N,ACS,(B01001_27+B01001_28+B01001_29+B01001_30)-(B01001_26-B23001_88)
+231,Females median age,8,N,Other,Calculated from ACS table B01001
+232,Males median age,8,N,Other,Calculated from ACS table B01001
+233,Persons median age,8,N,Other,Calculated from ACS table B01001
+234,Total population 5 years and over - age by language,8,N,ACS,B16004_1
+235,Total population 5 to 17 years - age by language,8,N,ACS,B16004_2
+236,Total 5-17 years that speak only English,8,N,ACS,B16004_3
+237,Total 5-17 years that speak only Spanish,8,N,ACS,B16004_4
+238,Total 5-17 years that speak Spanish and English very well,8,N,ACS,B16004_5
+239,Total 5-17 years that speak Spanish and English well,8,N,ACS,B16004_6
+240,Total 5-17 years that speak Spanish and English not well,8,N,ACS,B16004_7
+241,Total 5-17 years that speak Spanish and English not at all,8,N,ACS,B16004_8
+242,Total 5-17 years that speak other Indo-European language,8,N,ACS,B16004_9
+243,Total 5-17 years that speak Indo-European language/English very well,8,N,ACS,B16004_10
+244,Total 5-17 years that speak Indo-European language/English well,8,N,ACS,B16004_11
+245,Total 5-17 years that speak Indo-European language/English not well,8,N,ACS,B16004_12
+246,Total 5-17 years that speak Indo-European language/English not at all,8,N,ACS,B16004_13
+247,Total 5-17 years that speak Asian/Pacific Island language,8,N,ACS,B16004_14
+248,Total 5-17 years that speak Asian/Pacific Island and English very well,8,N,ACS,B16004_15
+249,Total 5-17 years that speak Asian/Pacific Island and English well,8,N,ACS,B16004_16
+250,Total 5-17 years that speak Asian/Pacific Island and English not well,8,N,ACS,B16004_17
+251,Total 5-17 years that speak Asian/Pacific Island and English not at all,8,N,ACS,B16004_18
+252,Total 5-17 years that speak other languages,8,N,ACS,B16004_19
+253,Total 5_17 years that speak other languages and English very well,8,N,ACS,B16004_20
+254,Total 5-17 years that speak other languages and English well,8,N,ACS,B16004_21
+255,Total 5-17 years that speak other languages and English not well,8,N,ACS,B16004_22
+256,Total 5-17 years that speak other languages and English not at all,8,N,ACS,B16004_23
+257,Total population 18-64 years - age by language,8,N,ACS,B16004_24
+258,Total 18-64 years that speak only English,8,N,ACS,B16004_25
+259,Total 18-64 years that speak only Spanish,8,N,ACS,B16004_26
+260,Total 18-64 years that speak Spanish and English very well,8,N,ACS,B16004_27
+261,Total 18-64 years that speak Spanish and English well,8,N,ACS,B16004_28
+262,Total 18-64 years that speak Spanish and English not well,8,N,ACS,B16004_29
+263,Total 18-64 years that speak Spanish and English not at all,8,N,ACS,B16004_30
+264,Total 18-64 years that speak other Indo-European language,8,N,ACS,B16004_31
+265,Total 18-64 years that speak Indo-European language/English very well,8,N,ACS,B16004_32
+266,Total 18-64 years that speak Indo-European language/English well,8,N,ACS,B16004_33
+267,Total 18-64 years that speak Indo-European language/English not well,8,N,ACS,B16004_34
+268,Total 18-64 years that speak Indo-European language/English not at all,8,N,ACS,B16004_35
+269,Total 18-64 years that speak Asian/Pacific Island language,8,N,ACS,B16004_36
+270,Total 18-64 years that speak Asian/Pacific Island and English very well,8,N,ACS,B16004_37
+271,Total 18-64 years that speak Asian/Pacific Island and English well,8,N,ACS,B16004_38
+272,Total 18-64 years that speak Asian/Pacific Island and English not well,8,N,ACS,B16004_39
+273,Total 18-64 years that speak Asian/Pacific Island and English not at all,8,N,ACS,B16004_40
+274,Total 18-64 years that speak other languages,8,N,ACS,B16004_41
+275,Total 18-64 years that speak other languages and English very well,8,N,ACS,B16004_42
+276,Total 18-64 years that speak other languages and English well,8,N,ACS,B16004_43
+277,Total 18-64 years that speak other languages and English not well,8,N,ACS,B16004_44
+278,Total 18-64 years that speak other languages and English not at all,8,N,ACS,B16004_45
+279,Total 65 years and over - age by language,8,N,ACS,B16004_46
+280,Total 65 years and over that speak only English,8,N,ACS,B16004_47
+281,Total 65 years and over that speak only Spanish,8,N,ACS,B16004_48
+282,Total 65 years and over that speak Spanish and English very well,8,N,ACS,B16004_49
+283,Total 65 years and over that speak Spanish and English well,8,N,ACS,B16004_50
+284,Total 65 years and over that speak Spanish and English not well,8,N,ACS,B16004_51
+285,Total 65 years and over that speak Spanish and English not at all,8,N,ACS,B16004_52
+286,Total 65 years and over that speak other Indo-European language,8,N,ACS,B16004_53
+287,Total 65 years and over that speak Indo-European language/English very well,8,N,ACS,B16004_54
+288,Total 65 years and over that speak Indo-European language/English well,8,N,ACS,B16004_55
+289,Total 65 years and over that speak Indo-European language/English not well,8,N,ACS,B16004_56
+290,Total 65 years and over that speak Indo-European language/English not at all,8,N,ACS,B16004_57
+291,Total 65 years and over that speak Asian/Pacific Island language,8,N,ACS,B16004_58
+292,Total 65 years and over that speak Asian/Pacific Islander and English very well,8,N,ACS,B16004_59
+293,Total 65 years and over that speak Asian/Pacific Island and English well,8,N,ACS,B16004_60
+294,Total 65 years and over that speak Asian/Pacific Islander and English not well,8,N,ACS,B16004_61
+295,Total 65 years and over that speak Asian/Pacific Islander and English not at all,8,N,ACS,B16004_62
+296,Total 65 years and over that speak other languages,8,N,ACS,B16004_63
+297,Total 65 years and over that speak other languages and English very well,8,N,ACS,B16004_64
+298,Total 65 years and over that speak other languages and English well,8,N,ACS,B16004_65
+299,Total 65 years and over that speak other languages and English not well,8,N,ACS,B16004_66
+300,Total 65 years and over that speak other languages and English not at all,8,N,ACS,B16004_67
+301,Total population 25 years and over,8,N,ACS,B15002_1
+302,Total male population 25 years and over,8,N,ACS,B15002_2
+303,Total male population 25 years and over - no schooling,8,N,ACS,B15002_3
+304,Total male population 25 years and over - Nursery to 4th grade,8,N,ACS,B15002_4
+305,Total male population 25 years and over - 5th and 6th grades,8,N,ACS,B15002_5
+306,Total male population 25 years and over - 7th and 8th grades,8,N,ACS,B15002_6
+307,Total male population 25 years and over - 9th grade,8,N,ACS,B15002_7
+308,Total male population 25 years and over - 10th grade,8,N,ACS,B15002_8
+309,Total male population 25 years and over - 11th grade,8,N,ACS,B15002_9
+310,Total male population 25 years and over - 12th grade - no diploma,8,N,ACS,B15002_10
+311,Total male population 25 years and over - high school grad (includes equivalency),8,N,ACS,B15002_11
+312,Total male population 25 years and over - some college - less than 1 year,8,N,ACS,B15002_12
+313,Total male population 25 years and over - some college -1 or more years,8,N,ACS,B15002_13
+314,Total male population 25 years and over - associate degree,8,N,ACS,B15002_14
+315,Total male population 25 years and over - bachelor's degree,8,N,ACS,B15002_15
+316,Total male population 25 years and over - master's degree,8,N,ACS,B15002_16
+317,Total male population 25 years and over - professional degree,8,N,ACS,B15002_17
+318,Total male population 25 years and over - doctorate degree,8,N,ACS,B15002_18
+319,Total female population 25 years and over,8,N,ACS,B15002_19
+320,Total female population 25 years and over - no schooling,8,N,ACS,B15002_20
+321,Total female population 25 years and over - Nursery to 4th grade,8,N,ACS,B15002_21
+322,Total female population 25 years and over - 5th and 6th grades,8,N,ACS,B15002_22
+323,Total female population 25 years and over - 7th and 8th grades,8,N,ACS,B15002_23
+324,Total female population 25 years and over - 9th grade,8,N,ACS,B15002_24
+325,Total female population 25 years and over - 10th grade,8,N,ACS,B15002_25
+326,Total female population 25 years and over - 11th grade,8,N,ACS,B15002_26
+327,Total female population 25 years and over - 12th grade - no diploma,8,N,ACS,B15002_27
+328,Total female population 25 years and over - high school grad (includes equivalency),8,N,ACS,B15002_28
+329,Total female population 25 years and over - some college - less than 1 year,8,N,ACS,B15002_29
+330,Total female population 25 years and over - some college -1 or more years,8,N,ACS,B15002_30
+331,Total female population 25 years and over - associate degree,8,N,ACS,B15002_31
+332,Total female population 25 years and over - bachelor's degree,8,N,ACS,B15002_32
+333,Total female population 25 years and over - master's degree,8,N,ACS,B15002_33
+334,Total female population 25 years and over - professional degree,8,N,ACS,B15002_34
+335,Total female population 25 years and over - doctorate degree,8,N,ACS,B15002_35
+336,Total population in group quarters,8,N,ACS,B26001_1
+337,Total institutionalized population - by group quarters type,8,N,NA,
+338,Total population in correctional institutions,8,N,NA,
+339,Total population in nursing homes,8,N,NA,
+340,Total population in other institutionalized quarters,8,N,NA,
+341,Total non-institutionalized population - by group quarters type,8,N,NA,
+342,Total population in college dorms,8,N,NA,
+343,Total population in military quarters,8,N,NA,
+344,Total population in other non-institutionalized quarters,8,N,NA,
+345,Total population 16 and over,8,N,ACS,B23001_1
+346,Total male population 16 and over,8,N,ACS,B23001_2
+347,Total male population 16 and over in labor force,8,N,ACS,B23001_4+B23001_11+B23001_18+B23001_25+B23001_32+B23001_39+B23001_46+B23001_53+B23001_60+B23001_67+B23001_74+B23001_79+B23001_84
+348,Total male population 16 and over in Armed Forces,8,N,ACS,B23001_5+B23001_12+B23001_19+B23001_26+B23001_33+B23001_40+B23001_47+B23001_54+B23001_61+B23001_68
+349,Total male population 16 and over - civilians,8,N,ACS,B23001_6+B23001_13+B23001_20+B23001_27+B23001_34+B23001_41+B23001_48+B23001_55+B23001_62+B23001_69
+350,Total male population 16 and over - employed,8,N,ACS,B23001_7+B23001_14+B23001_21+B23001_28+B23001_35+B23001_42+B23001_49+B23001_56+B23001_63+B23001_70+B23001_75+B23001_80+B23001_85
+351,Total male population 16 and over - unemployed,8,N,ACS,B23001_8+B23001_15+B23001_22+B23001_29+B23001_36+B23001_43+B23001_50+B23001_57+B23001_64+B23001_71+B23001_76+B23001_81+B23001_86
+352,Total male population 16 and over not in labor force,8,N,ACS,B23001_9+B23001_16+B23001_23+B23001_30+B23001_37+B23001_44+B23001_51+B23001_58+B23001_65+B23001_72+B23001_77+B23001_82+B23001_87
+353,Total female population 16 and over,8,N,ACS,B23001_88
+354,Total female population 16 and over in labor force,8,N,ACS,B23001_90+B23001_97+B23001_104+B23001_111+B23001_118+B23001_125+B23001_132+B23001_139+B23001_146+B23001_153+B23001_160+B23001_165+B23001_170
+355,Total female population 16 and over in Armed Forces,8,N,ACS,B23001_91+B23001_98+B23001_105+B23001_112+B23001_119+B23001_126+B23001_133+B23001_140+B23001_147+B23001_154
+356,Total female population 16 and over - civilians,8,N,ACS,B23001_92+B23001_99+B23001_106+B23001_113+B23001_120+B23001_127+B23001_134+B23001_141+B23001_148+B23001_155
+357,Total female population 16 and over - employed,8,N,ACS,B23001_93+B23001_100+B23001_107+B23001_114+B23001_121+B23001_128+B23001_135+B23001_142+B23001_149+B23001_156+B23001_161+B23001_166+B23001_171
+358,Total female population 16 and over - unemployed,8,N,ACS,B23001_94+B23001_101+B23001_108+B23001_115+B23001_122+B23001_129+B23001_136+B23001_143+B23001_150+B23001_157+B23001_162+B23001_167+B23001_172
+359,Total female population 16 and over not in labor force,8,N,ACS,B23001_95+B23001_102+B23001_109+B23001_116+B23001_123+B23001_130+B23001_137+B23001_144+B23001_151+B23001_158+B23001_163+B23001_168+B23001_173
+360,Total number of households,8,N,ACS,B19001_1
+361,"Total number of households < $10,000",8,N,ACS,B19001_2
+362,"Total number of households $10,000 to $14,999",8,N,ACS,B19001_3
+363,"Total number of households $15,000 to $19,999",8,N,ACS,B19001_4
+364,"Total number of households $20,000 to $24,999",8,N,ACS,B19001_5
+365,"Total number of households $25,000 to $29,999",8,N,ACS,B19001_6
+366,"Total number of households $30,000 to $34,999",8,N,ACS,B19001_7
+367,"Total number of households $35,000 to $39,999",8,N,ACS,B19001_8
+368,"Total number of households $40,000 to $44,999",8,N,ACS,B19001_9
+369,"Total number of households $45,000 to $49,999",8,N,ACS,B19001_10
+370,"Total number of households $50,000 to $59,999",8,N,ACS,B19001_11
+371,"Total number of households $60,000 to $74,999",8,N,ACS,B19001_12
+372,"Total number of households $75,000 to $99,999",8,N,ACS,B19001_13
+373,"Total number of households $100,000 to $124,999",8,N,ACS,B19001_14
+374,"Total number of households $125,000 to $149,999",8,N,ACS,B19001_15
+375,"Total number of households $150,000 to $199,999",8,N,ACS,B19001_16
+376,"Total number of households $200,000 or more",8,N,ACS,B19001_17
+377,Median household income (tract level),8,N,ACS,B19013_1
+378,Total households with White,8,N,ACS,B19001A_1
+379,"Total number of white households  < $10,000",8,N,ACS,B19001A_2
+380,"Total number of white households  $10,000 to $14,999",8,N,ACS,B19001A_3
+381,"Total number of white households  $15,000 to $19,999",8,N,ACS,B19001A_4
+382,"Total number of white households  $20,000 to $24,999",8,N,ACS,B19001A_5
+383,"Total number of white households  $25,000 to $29,999",8,N,ACS,B19001A_6
+384,"Total number of white households  $30,000 to $34,999",8,N,ACS,B19001A_7
+385,"Total number of white households  $35,000 to $39,999",8,N,ACS,B19001A_8
+386,"Total number of white households  $40,000 to $44,999",8,N,ACS,B19001A_9
+387,"Total number of white households  $45,000 to $49,999",8,N,ACS,B19001A_10
+388,"Total number of white households  $50,000 to $59,999",8,N,ACS,B19001A_11
+389,"Total number of white households  $60,000 to $74,999",8,N,ACS,B19001A_12
+390,"Total number of white households  $75,000 to $99,999",8,N,ACS,B19001A_13
+391,"Total number of white households  $100,000 to $124,999",8,N,ACS,B19001A_14
+392,"Total number of white households  $125,000 to $149,999",8,N,ACS,B19001A_15
+393,"Total number of white households  $150,000 to $199,999",8,N,ACS,B19001A_16
+394,"Total number of white households  $200,000 or more",8,N,ACS,B19001A_17
+395,Total households with Black of African American,8,N,ACS,B19001B_1
+396,"Total number of Black households  < $10,000",8,N,ACS,B19001B_2
+397,"Total number of Black households  $10,000 to $14,999",8,N,ACS,B19001B_3
+398,"Total number of Black households  $15,000 to $19,999",8,N,ACS,B19001B_4
+399,"Total number of Black households  $20,000 to $24,999",8,N,ACS,B19001B_5
+400,"Total number of Black households  $25,000 to $29,999",8,N,ACS,B19001B_6
+401,"Total number of Black households  $30,000 to $34,999",8,N,ACS,B19001B_7
+402,"Total number of Black households  $35,000 to $39,999",8,N,ACS,B19001B_8
+403,"Total number of Black households  $40,000 to $44,999",8,N,ACS,B19001B_9
+404,"Total number of Black households  $45,000 to $49,999",8,N,ACS,B19001B_10
+405,"Total number of Black households  $50,000 to $59,999",8,N,ACS,B19001B_11
+406,"Total number of Black households  $60,000 to $74,999",8,N,ACS,B19001B_12
+407,"Total number of Black households  $75,000 to $99,999",8,N,ACS,B19001B_13
+408,"Total number of Black households  $100,000 to $124,999",8,N,ACS,B19001B_14
+409,"Total number of Black households  $125,000 to $149,999",8,N,ACS,B19001B_15
+410,"Total number of Black households  $150,000 to $199,999",8,N,ACS,B19001B_16
+411,"Total number of Black households  $200,000 or more",8,N,ACS,B19001B_17
+412,Total households with American Indian/Alaska Native,8,N,ACS,B19001C_1
+413,"Total number of American Indian/Alaska Native households  < $10,000",8,N,ACS,B19001C_2
+414,"Total number of American Indian/Alaska Native households  $10,000 to $14,999",8,N,ACS,B19001C_3
+415,"Total number of American Indian/Alaska Native households  $15,000 to $19,999",8,N,ACS,B19001C_4
+416,"Total number of American Indian/Alaska Native households  $20,000 to $24,999",8,N,ACS,B19001C_5
+417,"Total number of American Indian/Alaska Native households  $25,000 to $29,999",8,N,ACS,B19001C_6
+418,"Total number of American Indian/Alaska Native households  $30,000 to $34,999",8,N,ACS,B19001C_7
+419,"Total number of American Indian/Alaska Native households  $35,000 to $39,999",8,N,ACS,B19001C_8
+420,"Total number of American Indian/Alaska Native households  $40,000 to $44,999",8,N,ACS,B19001C_9
+421,"Total number of American Indian/Alaska Native households  $45,000 to $49,999",8,N,ACS,B19001C_10
+422,"Total number of American Indian/Alaska Native households  $50,000 to $59,999",8,N,ACS,B19001C_11
+423,"Total number of American Indian/Alaska Native households  $60,000 to $74,999",8,N,ACS,B19001C_12
+424,"Total number of American Indian/Alaska Native households  $75,000 to $99,999",8,N,ACS,B19001C_13
+425,"Total number of American Indian/Alaska Native households  $100,000 to $124,999",8,N,ACS,B19001C_14
+426,"Total number of American Indian/Alaska Native households  $125,000 to $149,999",8,N,ACS,B19001C_15
+427,"Total number of American Indian/Alaska Native households  $150,000 to $199,999",8,N,ACS,B19001C_16
+428,"Total number of American Indian/Alaska Native households  $200,000 or more",8,N,ACS,B19001C_17
+429,Total households with Asian,8,N,ACS,B19001D_1
+430,"Total number of Asian households  < $10,000",8,N,ACS,B19001D_2
+431,"Total number of Asian households  $10,000 to $14,999",8,N,ACS,B19001D_3
+432,"Total number of Asian households  $15,000 to $19,999",8,N,ACS,B19001D_4
+433,"Total number of Asian households  $20,000 to $24,999",8,N,ACS,B19001D_5
+434,"Total number of Asian households  $25,000 to $29,999",8,N,ACS,B19001D_6
+435,"Total number of Asian households  $30,000 to $34,999",8,N,ACS,B19001D_7
+436,"Total number of Asian households  $35,000 to $39,999",8,N,ACS,B19001D_8
+437,"Total number of Asian households  $40,000 to $44,999",8,N,ACS,B19001D_9
+438,"Total number of Asian households  $45,000 to $49,999",8,N,ACS,B19001D_10
+439,"Total number of Asian households  $50,000 to $59,999",8,N,ACS,B19001D_11
+440,"Total number of Asian households  $60,000 to $74,999",8,N,ACS,B19001D_12
+441,"Total number of Asian households  $75,000 to $99,999",8,N,ACS,B19001D_13
+442,"Total number of Asian households  $100,000 to $124,999",8,N,ACS,B19001D_14
+443,"Total number of Asian households  $125,000 to $149,999",8,N,ACS,B19001D_15
+444,"Total number of Asian households  $150,000 to $199,999",8,N,ACS,B19001D_16
+445,"Total number of Asian households  $200,000 or more",8,N,ACS,B19001D_17
+446,Total households with Native Hawaiian/Pacific Islander,8,N,ACS,B19001E_1
+447,"Total number of Native Hawaiian/Pacific Islander households  < $10,000",8,N,ACS,B19001E_2
+448,"Total number of Native Hawaiian/Pacific Islander households  $10,000 to $14,999",8,N,ACS,B19001E_3
+449,"Total number of Native Hawaiian/Pacific Islander households  $15,000 to $19,999",8,N,ACS,B19001E_4
+450,"Total number of Native Hawaiian/Pacific Islander households  $20,000 to $24,999",8,N,ACS,B19001E_5
+451,"Total number of Native Hawaiian/Pacific Islander households  $25,000 to $29,999",8,N,ACS,B19001E_6
+452,"Total number of Native Hawaiian/Pacific Islander households  $30,000 to $34,999",8,N,ACS,B19001E_7
+453,"Total number of Native Hawaiian/Pacific Islander households  $35,000 to $39,999",8,N,ACS,B19001E_8
+454,"Total number of Native Hawaiian/Pacific Islander households  $40,000 to $44,999",8,N,ACS,B19001E_9
+455,"Total number of Native Hawaiian/Pacific Islander households  $45,000 to $49,999",8,N,ACS,B19001E_10
+456,"Total number of Native Hawaiian/Pacific Islander households  $50,000 to $59,999",8,N,ACS,B19001E_11
+457,"Total number of Native Hawaiian/Pacific Islander households  $60,000 to $74,999",8,N,ACS,B19001E_12
+458,"Total number of Native Hawaiian/Pacific Islander households  $75,000 to $99,999",8,N,ACS,B19001E_13
+459,"Total number of Native Hawaiian/Pacific Islander households  $100,000 to $124,999",8,N,ACS,B19001E_14
+460,"Total number of Native Hawaiian/Pacific Islander households  $125,000 to $149,999",8,N,ACS,B19001E_15
+461,"Total number of Native Hawaiian/Pacific Islander households  $150,000 to $199,999",8,N,ACS,B19001E_16
+462,"Total number of Native Hawaiian/Pacific Islander households  $200,000 or more",8,N,ACS,B19001E_17
+463,Total households with Some Other Race,8,N,ACS,B19001F_1
+464,"Total number of Some Other Race households  < $10,000",8,N,ACS,B19001F_2
+465,"Total number of Some Other Race households  $10,000 to $14,999",8,N,ACS,B19001F_3
+466,"Total number of Some Other Race households  $15,000 to $19,999",8,N,ACS,B19001F_4
+467,"Total number of Some Other Race households  $20,000 to $24,999",8,N,ACS,B19001F_5
+468,"Total number of Some Other Race households  $25,000 to $29,999",8,N,ACS,B19001F_6
+469,"Total number of Some Other Race households  $30,000 to $34,999",8,N,ACS,B19001F_7
+470,"Total number of Some Other Race households  $35,000 to $39,999",8,N,ACS,B19001F_8
+471,"Total number of Some Other Race households  $40,000 to $44,999",8,N,ACS,B19001F_9
+472,"Total number of Some Other Race households  $45,000 to $49,999",8,N,ACS,B19001F_10
+473,"Total number of Some Other Race households  $50,000 to $59,999",8,N,ACS,B19001F_11
+474,"Total number of Some Other Race households  $60,000 to $74,999",8,N,ACS,B19001F_12
+475,"Total number of Some Other Race households  $75,000 to $99,999",8,N,ACS,B19001F_13
+476,"Total number of Some Other Race households  $100,000 to $124,999",8,N,ACS,B19001F_14
+477,"Total number of Some Other Race households  $125,000 to $149,999",8,N,ACS,B19001F_15
+478,"Total number of Some Other Race households  $150,000 to $199,999",8,N,ACS,B19001F_16
+479,"Total number of Some Other Race households  $200,000 or more",8,N,ACS,B19001F_17
+480,Total households with Two or More Races,8,N,ACS,B19001G_1
+481,"Total number of Two or More Races households  < $10,000",8,N,ACS,B19001G_2
+482,"Total number of Two or More Races households  $10,000 to $14,999",8,N,ACS,B19001G_3
+483,"Total number of Two or More Races households  $15,000 to $19,999",8,N,ACS,B19001G_4
+484,"Total number of Two or More Races households  $20,000 to $24,999",8,N,ACS,B19001G_5
+485,"Total number of Two or More Races households  $25,000 to $29,999",8,N,ACS,B19001G_6
+486,"Total number of Two or More Races households  $30,000 to $34,999",8,N,ACS,B19001G_7
+487,"Total number of Two or More Races households  $35,000 to $39,999",8,N,ACS,B19001G_8
+488,"Total number of Two or More Races households  $40,000 to $44,999",8,N,ACS,B19001G_9
+489,"Total number of Two or More Races households  $45,000 to $49,999",8,N,ACS,B19001G_10
+490,"Total number of Two or More Races households  $50,000 to $59,999",8,N,ACS,B19001G_11
+491,"Total number of Two or More Races households  $60,000 to $74,999",8,N,ACS,B19001G_12
+492,"Total number of Two or More Races households  $75,000 to $99,999",8,N,ACS,B19001G_13
+493,"Total number of Two or More Races households  $100,000 to $124,999",8,N,ACS,B19001G_14
+494,"Total number of Two or More Races households  $125,000 to $149,999",8,N,ACS,B19001G_15
+495,"Total number of Two or More Races households  $150,000 to $199,999",8,N,ACS,B19001G_16
+496,"Total number of Two or More Races households  $200,000 or more",8,N,ACS,B19001G_17
+497,Total number of households with Hispanic or Latino,8,N,ACS,B19001I_1
+498,"Total number of Hispanic or Latino households  < $10,000",8,N,ACS,B19001I_2
+499,"Total number of Hispanic or Latino households  $10,000 to $14,999",8,N,ACS,B19001I_3
+500,"Total number of Hispanic or Latino households  $15,000 to $19,999",8,N,ACS,B19001I_4
+501,"Total number of Hispanic or Latino households  $20,000 to $24,999",8,N,ACS,B19001I_5
+502,"Total number of Hispanic or Latino households  $25,000 to $29,999",8,N,ACS,B19001I_6
+503,"Total number of Hispanic or Latino households  $30,000 to $34,999",8,N,ACS,B19001I_7
+504,"Total number of Hispanic or Latino households  $35,000 to $39,999",8,N,ACS,B19001I_8
+505,"Total number of Hispanic or Latino households  $40,000 to $44,999",8,N,ACS,B19001I_9
+506,"Total number of Hispanic or Latino households  $45,000 to $49,999",8,N,ACS,B19001I_10
+507,"Total number of Hispanic or Latino households  $50,000 to $59,999",8,N,ACS,B19001I_11
+508,"Total number of Hispanic or Latino households  $60,000 to $74,999",8,N,ACS,B19001I_12
+509,"Total number of Hispanic or Latino households  $75,000 to $99,999",8,N,ACS,B19001I_13
+510,"Total number of Hispanic or Latino households  $100,000 to $124,999",8,N,ACS,B19001I_14
+511,"Total number of Hispanic or Latino households  $125,000 to $149,999",8,N,ACS,B19001I_15
+512,"Total number of Hispanic or Latino households  $150,000 to $199,999",8,N,ACS,B19001I_16
+513,"Total number of Hispanic or Latino households  $200,000 or more",8,N,ACS,B19001I_17
+514,"Total number of households with White, Not Hispanic",8,N,ACS,B19001H_1
+515,"Total number of White, Not Hispanic households  < $10,000",8,N,ACS,B19001H_2
+516,"Total number of White, Not Hispanic households  $10,000 to $14,999",8,N,ACS,B19001H_3
+517,"Total number of White, Not Hispanic households  $15,000 to $19,999",8,N,ACS,B19001H_4
+518,"Total number of White, Not Hispanic households  $20,000 to $24,999",8,N,ACS,B19001H_5
+519,"Total number of White, Not Hispanic households  $25,000 to $29,999",8,N,ACS,B19001H_6
+520,"Total number of White, Not Hispanic households  $30,000 to $34,999",8,N,ACS,B19001H_7
+521,"Total number of White, Not Hispanic households  $35,000 to $39,999",8,N,ACS,B19001H_8
+522,"Total number of White, Not Hispanic households  $40,000 to $44,999",8,N,ACS,B19001H_9
+523,"Total number of White, Not Hispanic households  $45,000 to $49,999",8,N,ACS,B19001H_10
+524,"Total number of White, Not Hispanic households  $50,000 to $59,999",8,N,ACS,B19001H_11
+525,"Total number of White, Not Hispanic households  $60,000 to $74,999",8,N,ACS,B19001H_12
+526,"Total number of White, Not Hispanic households  $75,000 to $99,999",8,N,ACS,B19001H_13
+527,"Total number of White, Not Hispanic households  $100,000 to $124,999",8,N,ACS,B19001H_14
+528,"Total number of White, Not Hispanic households  $125,000 to $149,999",8,N,ACS,B19001H_15
+529,"Total number of White, Not Hispanic households  $150,000 to $199,999",8,N,ACS,B19001H_16
+530,"Total number of White, Not Hispanic households  $200,000 or more",8,N,ACS,B19001H_17
+531,Median household income White,8,N,ACS,B19013A_1
+532,Median household income Black,8,N,ACS,B19013B_1
+533,Median household income American Indian/Alaska Native,8,N,ACS,B19013C_1
+534,Median household income Asian,8,N,ACS,B19013D_1
+535,Median household income Native Hawaiian/Pacific Islander,8,N,ACS,B19013E_1
+536,Median household income some other race,8,N,ACS,B19013F_1
+537,Median household two or more races,8,N,ACS,B19013G_1
+538,Median households with Hispanic or Latino,8,N,ACS,B19013I_1
+539,Median households with White/Not Hispanic,8,N,ACS,B19013H_1
+540,Total households with or without wage or salary income,8,N,ACS,B19052_1
+541,Total households with wage or salary income,8,N,ACS,B19052_2
+542,Total households without wage or salary income,8,N,ACS,B19052_3
+543,Total households with or without self employment income,8,N,ACS,B19053_1
+544,Total households with self employment income,8,N,ACS,B19053_2
+545,Total households with no self employment income,8,N,ACS,B19053_3
+546,"Total households with or without interest, dividends, or rental income",8,N,ACS,B19054_1
+547,"Total households with interest, dividends, or rental income",8,N,ACS,B19054_2
+548,"Total households without interest, dividends, or rental income",8,N,ACS,B19054_3
+549,Total households with or without social security,8,N,ACS,B19055_1
+550,Total households with social security,8,N,ACS,B19055_2
+551,Total households without social security,8,N,ACS,B19055_3
+552,Total households with or without supplemental income,8,N,ACS,B19056_1
+553,Total households with supplemental income,8,N,ACS,B19056_2
+554,Total households without supplemental income,8,N,ACS,B19056_3
+555,Total households with or without public assistance income,8,N,ACS,B19057_1
+556,Total households with public assistance income,8,N,ACS,B19057_2
+557,Total households without public assistance income,8,N,ACS,B19057_3
+558,Total households with or without retirement income,8,N,ACS,B19059_1
+559,Total households with retirement income,8,N,ACS,B19059_2
+560,Total households without retirement income,8,N,ACS,B19059_3
+561,Total households with or without other income,8,N,ACS,B19060_1
+562,Total households with other income,8,N,ACS,B19060_2
+563,Total households without other income,8,N,ACS,B19060_3
+564,Total number of families,8,N,ACS,B19101_1
+565,"Total families with income less than $10,000",8,N,ACS,B19101_2
+566,"Total number of Families with income  $10,000 to $14,999",8,N,ACS,B19101_3
+567,"Total number of Families with income  $15,000 to $19,999",8,N,ACS,B19101_4
+568,"Total number of Families with income  $20,000 to $24,999",8,N,ACS,B19101_5
+569,"Total number of Families with income  $25,000 to $29,999",8,N,ACS,B19101_6
+570,"Total number of Families with income  $30,000 to $34,999",8,N,ACS,B19101_7
+571,"Total number of Families with income  $35,000 to $39,999",8,N,ACS,B19101_8
+572,"Total number of Families with income  $40,000 to $44,999",8,N,ACS,B19101_9
+573,"Total number of Families with income  $45,000 to $49,999",8,N,ACS,B19101_10
+574,"Total number of Families with income  $50,000 to $59,999",8,N,ACS,B19101_11
+575,"Total number of Families with income  $60,000 to $74,999",8,N,ACS,B19101_12
+576,"Total number of Families with income  $75,000 to $99,999",8,N,ACS,B19101_13
+577,"Total number of Families with income  $100,000 to $124,999",8,N,ACS,B19101_14
+578,"Total number of Families with income  $125,000 to $149,999",8,N,ACS,B19101_15
+579,"Total number of Families with income  $150,000 to $199,999",8,N,ACS,B19101_16
+580,"Total number of Families with income  $200,000 or more",8,N,ACS,B19101_17
+581,Median family income tract level,8,N,ACS,B19113_1
+582,Total number of White families,8,N,ACS,B19101A_1
+583,"Total White families with income less than $10,000",8,N,ACS,B19101A_2
+584,"Total number of White families with income  $10,000 to $14,999",8,N,ACS,B19101A_3
+585,"Total number of White families with income  $15,000 to $19,999",8,N,ACS,B19101A_4
+586,"Total number of White families with income  $20,000 to $24,999",8,N,ACS,B19101A_5
+587,"Total number of White families with income  $25,000 to $29,999",8,N,ACS,B19101A_6
+588,"Total number of White families with income  $30,000 to $34,999",8,N,ACS,B19101A_7
+589,"Total number of White families with income  $35,000 to $39,999",8,N,ACS,B19101A_8
+590,"Total number of White families with income  $40,000 to $44,999",8,N,ACS,B19101A_9
+591,"Total number of White families with income  $45,000 to $49,999",8,N,ACS,B19101A_10
+592,"Total number of White families with income  $50,000 to $59,999",8,N,ACS,B19101A_11
+593,"Total number of White families with income  $60,000 to $74,999",8,N,ACS,B19101A_12
+594,"Total number of White families with income  $75,000 to $99,999",8,N,ACS,B19101A_13
+595,"Total number of White families with income  $100,000 to $124,999",8,N,ACS,B19101A_14
+596,"Total number of White families with income  $125,000 to $149,999",8,N,ACS,B19101A_15
+597,"Total number of White families with income  $150,000 to $199,999",8,N,ACS,B19101A_16
+598,"Total number of White families with income  $200,000 or more",8,N,ACS,B19101A_17
+599,Total number of black families,8,N,ACS,B19101B_1
+600,"Total black families with income less than $10,000",8,N,ACS,B19101B_2
+601,"Total number of black families with income  $10,000 to $14,999",8,N,ACS,B19101B_3
+602,"Total number of black families with income  $15,000 to $19,999",8,N,ACS,B19101B_4
+603,"Total number of black families with income  $20,000 to $24,999",8,N,ACS,B19101B_5
+604,"Total number of black families with income  $25,000 to $29,999",8,N,ACS,B19101B_6
+605,"Total number of black families with income  $30,000 to $34,999",8,N,ACS,B19101B_7
+606,"Total number of black families with income  $35,000 to $39,999",8,N,ACS,B19101B_8
+607,"Total number of black families with income  $40,000 to $44,999",8,N,ACS,B19101B_9
+608,"Total number of black families with income  $45,000 to $49,999",8,N,ACS,B19101B_10
+609,"Total number of black families with income  $50,000 to $59,999",8,N,ACS,B19101B_11
+610,"Total number of black families with income  $60,000 to $74,999",8,N,ACS,B19101B_12
+611,"Total number of black families with income  $75,000 to $99,999",8,N,ACS,B19101B_13
+612,"Total number of black families with income  $100,000 to $124,999",8,N,ACS,B19101B_14
+613,"Total number of black families with income  $125,000 to $149,999",8,N,ACS,B19101B_15
+614,"Total number of black families with income  $150,000 to $199,999",8,N,ACS,B19101B_16
+615,"Total number of black families with income  $200,000 or more",8,N,ACS,B19101B_17
+616,Total American Indian/Alaska Native families,8,N,ACS,B19101C_1
+617,"Total American Indian/Alaska Native family with income less than $10,000",8,N,ACS,B19101C_2
+618,"Total American Indian/Alaska Native family with income  $10,000 to $14,999",8,N,ACS,B19101C_3
+619,"Total American Indian/Alaska Native family with income  $15,000 to $19,999",8,N,ACS,B19101C_4
+620,"Total American Indian/Alaska Native family with income  $20,000 to $24,999",8,N,ACS,B19101C_5
+621,"Total American Indian/Alaska Native family with income  $25,000 to $29,999",8,N,ACS,B19101C_6
+622,"Total American Indian/Alaska Native family with income  $30,000 to $34,999",8,N,ACS,B19101C_7
+623,"Total American Indian/Alaska Native family with income  $35,000 to $39,999",8,N,ACS,B19101C_8
+624,"Total American Indian/Alaska Native family with income  $40,000 to $44,999",8,N,ACS,B19101C_9
+625,"Total American Indian/Alaska Native family with income  $45,000 to $49,999",8,N,ACS,B19101C_10
+626,"Total American Indian/Alaska Native family with income  $50,000 to $59,999",8,N,ACS,B19101C_11
+627,"Total American Indian/Alaska Native family with income  $60,000 to $74,999",8,N,ACS,B19101C_12
+628,"Total American Indian/Alaska Native family with income  $75,000 to $99,999",8,N,ACS,B19101C_13
+629,"Total American Indian/Alaska Native family with income  $100,000 to $124,999",8,N,ACS,B19101C_14
+630,"Total American Indian/Alaska Native family with income  $125,000 to $149,999",8,N,ACS,B19101C_15
+631,"Total American Indian/Alaska Native family with income  $150,000 to $199,999",8,N,ACS,B19101C_16
+632,"Total American Indian/Alaska Native family with income  $200,000 or more",8,N,ACS,B19101C_17
+633,Total Asian families,8,N,ACS,B19101D_1
+634,"Total Asian family with income less than $10,000",8,N,ACS,B19101D_2
+635,"Total   Asian family with income  $10,000 to $14,999",8,N,ACS,B19101D_3
+636,"Total   Asian family with income  $15,000 to $19,999",8,N,ACS,B19101D_4
+637,"Total   Asian family with income  $20,000 to $24,999",8,N,ACS,B19101D_5
+638,"Total   Asian family with income  $25,000 to $29,999",8,N,ACS,B19101D_6
+639,"Total   Asian family with income  $30,000 to $34,999",8,N,ACS,B19101D_7
+640,"Total   Asian family with income  $35,000 to $39,999",8,N,ACS,B19101D_8
+641,"Total   Asian family with income  $40,000 to $44,999",8,N,ACS,B19101D_9
+642,"Total   Asian family with income  $45,000 to $49,999",8,N,ACS,B19101D_10
+643,"Total   Asian family with income  $50,000 to $59,999",8,N,ACS,B19101D_11
+644,"Total   Asian family with income  $60,000 to $74,999",8,N,ACS,B19101D_12
+645,"Total   Asian family with income  $75,000 to $99,999",8,N,ACS,B19101D_13
+646,"Total   Asian family with income  $100,000 to $124,999",8,N,ACS,B19101D_14
+647,"Total   Asian family with income  $125,000 to $149,999",8,N,ACS,B19101D_15
+648,"Total   Asian family with income  $150,000 to $199,999",8,N,ACS,B19101D_16
+649,"Total   Asian family with income  $200,000 or more",8,N,ACS,B19101D_17
+650,Total  Native Hawaiian/Pacific Islander families,8,N,ACS,B19101E_1
+651,"Total   Native Hawaiian/Pacific Islander family with income  < $10,000",8,N,ACS,B19101E_2
+652,"Total   Native Hawaiian/Pacific Islander family with income  $10,000 to $14,999",8,N,ACS,B19101E_3
+653,"Total   Native Hawaiian/Pacific Islander family with income  $15,000 to $19,999",8,N,ACS,B19101E_4
+654,"Total   Native Hawaiian/Pacific Islander family with income  $20,000 to $24,999",8,N,ACS,B19101E_5
+655,"Total   Native Hawaiian/Pacific Islander family with income  $25,000 to $29,999",8,N,ACS,B19101E_6
+656,"Total   Native Hawaiian/Pacific Islander family with income  $30,000 to $34,999",8,N,ACS,B19101E_7
+657,"Total   Native Hawaiian/Pacific Islander family with income  $35,000 to $39,999",8,N,ACS,B19101E_8
+658,"Total   Native Hawaiian/Pacific Islander family with income  $40,000 to $44,999",8,N,ACS,B19101E_9
+659,"Total   Native Hawaiian/Pacific Islander family with income  $45,000 to $49,999",8,N,ACS,B19101E_10
+660,"Total   Native Hawaiian/Pacific Islander family with income  $50,000 to $59,999",8,N,ACS,B19101E_11
+661,"Total   Native Hawaiian/Pacific Islander family with income  $60,000 to $74,999",8,N,ACS,B19101E_12
+662,"Total   Native Hawaiian/Pacific Islander family with income  $75,000 to $99,999",8,N,ACS,B19101E_13
+663,"Total   Native Hawaiian/Pacific Islander family with income  $100,000 to $124,999",8,N,ACS,B19101E_14
+664,"Total   Native Hawaiian/Pacific Islander family with income  $125,000 to $149,999",8,N,ACS,B19101E_15
+665,"Total   Native Hawaiian/Pacific Islander family with income  $150,000 to $199,999",8,N,ACS,B19101E_16
+666,"Total   Native Hawaiian/Pacific Islander family with income  $200,000 or more",8,N,ACS,B19101E_17
+667,Total families with some other race,8,N,ACS,B19101F_1
+668,"Total   some other race family with income  < $10,000",8,N,ACS,B19101F_2
+669,"Total   some other race family with income  $10,000 to $14,999",8,N,ACS,B19101F_3
+670,"Total   some other race family with income  $15,000 to $19,999",8,N,ACS,B19101F_4
+671,"Total   some other race family with income  $20,000 to $24,999",8,N,ACS,B19101F_5
+672,"Total   some other race family with income  $25,000 to $29,999",8,N,ACS,B19101F_6
+673,"Total   some other race family with income  $30,000 to $34,999",8,N,ACS,B19101F_7
+674,"Total   some other race family with income  $35,000 to $39,999",8,N,ACS,B19101F_8
+675,"Total   some other race family with income  $40,000 to $44,999",8,N,ACS,B19101F_9
+676,"Total   some other race family with income  $45,000 to $49,999",8,N,ACS,B19101F_10
+677,"Total   some other race family with income  $50,000 to $59,999",8,N,ACS,B19101F_11
+678,"Total   some other race family with income  $60,000 to $74,999",8,N,ACS,B19101F_12
+679,"Total   some other race family with income  $75,000 to $99,999",8,N,ACS,B19101F_13
+680,"Total   some other race family with income  $100,000 to $124,999",8,N,ACS,B19101F_14
+681,"Total   some other race family with income  $125,000 to $149,999",8,N,ACS,B19101F_15
+682,"Total   some other race family with income  $150,000 to $199,999",8,N,ACS,B19101F_16
+683,"Total   some other race family with income  $200,000 or more",8,N,ACS,B19101F_17
+684,Total families with two or more races,8,N,ACS,B19101G_1
+685,"Total   two or more races family with income  < $10,000",8,N,ACS,B19101G_2
+686,"Total   two or more races family with income  $10,000 to $14,999",8,N,ACS,B19101G_3
+687,"Total   two or more races family with income  $15,000 to $19,999",8,N,ACS,B19101G_4
+688,"Total   two or more races family with income  $20,000 to $24,999",8,N,ACS,B19101G_5
+689,"Total   two or more races family with income  $25,000 to $29,999",8,N,ACS,B19101G_6
+690,"Total   two or more races family with income  $30,000 to $34,999",8,N,ACS,B19101G_7
+691,"Total   two or more races family with income  $35,000 to $39,999",8,N,ACS,B19101G_8
+692,"Total   two or more races family with income  $40,000 to $44,999",8,N,ACS,B19101G_9
+693,"Total   two or more races family with income  $45,000 to $49,999",8,N,ACS,B19101G_10
+694,"Total   two or more races family with income  $50,000 to $59,999",8,N,ACS,B19101G_11
+695,"Total   two or more races family with income  $60,000 to $74,999",8,N,ACS,B19101G_12
+696,"Total   two or more races family with income  $75,000 to $99,999",8,N,ACS,B19101G_13
+697,"Total   two or more races family with income  $100,000 to $124,999",8,N,ACS,B19101G_14
+698,"Total   two or more races family with income  $125,000 to $149,999",8,N,ACS,B19101G_15
+699,"Total   two or more races family with income  $150,000 to $199,999",8,N,ACS,B19101G_16
+700,"Total   two or more races family with income  $200,000 or more",8,N,ACS,B19101G_17
+701,Total Hispanic or Latino families,8,N,ACS,B19101I_1
+702,"Total Hispanic or Latino family with income  < $10,000",8,N,ACS,B19101I_2
+703,"Total Hispanic or Latino family with income  $10,000 to $14,999",8,N,ACS,B19101I_3
+704,"Total Hispanic or Latino family with income  $15,000 to $19,999",8,N,ACS,B19101I_4
+705,"Total Hispanic or Latino family with income  $20,000 to $24,999",8,N,ACS,B19101I_5
+706,"Total Hispanic or Latino family with income  $25,000 to $29,999",8,N,ACS,B19101I_6
+707,"Total Hispanic or Latino family with income  $30,000 to $34,999",8,N,ACS,B19101I_7
+708,"Total Hispanic or Latino family with income  $35,000 to $39,999",8,N,ACS,B19101I_8
+709,"Total Hispanic or Latino family with income  $40,000 to $44,999",8,N,ACS,B19101I_9
+710,"Total Hispanic or Latino family with income  $45,000 to $49,999",8,N,ACS,B19101I_10
+711,"Total Hispanic or Latino family with income  $50,000 to $59,999",8,N,ACS,B19101I_11
+712,"Total Hispanic or Latino family with income  $60,000 to $74,999",8,N,ACS,B19101I_12
+713,"Total Hispanic or Latino family with income  $75,000 to $99,999",8,N,ACS,B19101I_13
+714,"Total Hispanic or Latino family with income  $100,000 to $124,999",8,N,ACS,B19101I_14
+715,"Total Hispanic or Latino family with income  $125,000 to $149,999",8,N,ACS,B19101I_15
+716,"Total Hispanic or Latino family with income  $150,000 to $199,999",8,N,ACS,B19101I_16
+717,"Total Hispanic or Latino family with income  $200,000 or more",8,N,ACS,B19101I_17
+718,Total White families - non-Hispanic,8,N,ACS,B19101H_1
+719,"Total White family Non-Hispanic  with income < $10,000",8,N,ACS,B19101H_2
+720,"Total White family Non-Hispanic  with income $10,000 to $14,999",8,N,ACS,B19101H_3
+721,"Total White family Non-Hispanic  with income $15,000 to $19,999",8,N,ACS,B19101H_4
+722,"Total White family Non-Hispanic  with income $20,000 to $24,999",8,N,ACS,B19101H_5
+723,"Total White family Non-Hispanic  with income $25,000 to $29,999",8,N,ACS,B19101H_6
+724,"Total White family Non-Hispanic  with income $30,000 to $34,999",8,N,ACS,B19101H_7
+725,"Total White family Non-Hispanic  with income $35,000 to  $39,999",8,N,ACS,B19101H_8
+726,"Total White family Non-Hispanic  with income $40,000 to  $44,999",8,N,ACS,B19101H_9
+727,"Total White family Non-Hispanic  with income $45,000 to  $49,999",8,N,ACS,B19101H_10
+728,"Total White family Non-Hispanic  with income $50,000 to  $59,999",8,N,ACS,B19101H_11
+729,"Total White family Non-Hispanic  with income $60,000 to  $74,999",8,N,ACS,B19101H_12
+730,"Total White family Non-Hispanic  with income $75,000 to  $99,999",8,N,ACS,B19101H_13
+731,"Total White family Non-Hispanic  with income $100,000 to $124,999",8,N,ACS,B19101H_14
+732,"Total White family Non-Hispanic  with income $125,000 to  $149,999",8,N,ACS,B19101H_15
+733,"Total White family Non-Hispanic  with income $150,000 to $199,999",8,N,ACS,B19101H_16
+734,"Total White family Non-Hispanic  with income $200,000 or more",8,N,ACS,B19101H_17
+735,Median family income - white,8,N,ACS,B19113A_1
+736,Median family income - black,8,N,ACS,B19113B_1
+737,Median family income - American Indian/Alaska Native,8,N,ACS,B19113C_1
+738,Median family income - Asian,8,N,ACS,B19113D_1
+739,Median family income - Native Hawaiian/Pacific Islander,8,N,ACS,B19113E_1
+740,Median family income - Some other race,8,N,ACS,B19113F_1
+741,Median family income - Two or more races,8,N,ACS,B19113G_1
+742,Median family income - Hispanic or Latino,8,N,ACS,B19113I_1
+743,"Median family income - White, not Hispanic",8,N,ACS,B19113H_1
+744,Median non-family income,8,N,ACS,B19202_1
+745,Average family income - All races,8,N,Other,
+746,Average family income - White - Hispanic/Non Hispanic,8,N,Other,
+747,Average family income - Black - Hispanic/Non Hispanic,8,N,Other,
+748,Average family income - Hispanic,8,N,Other,
+749,"Average family income - White, non Hispanic",8,N,Other,
+750,Total population for whom poverty status is determined,8,N,ACS,B17001_1
+751,Population where income is below poverty level,8,N,ACS,B17001_2
+752,Persons under 5 years where income is below poverty level,8,N,ACS,B17001_4+B17001_18
+753,Persons 5 years where income is below poverty level,8,N,ACS,B17001_5+B17001_19
+754,Persons 6 to 11 years where income is below poverty level,8,N,ACS,B17001_6+B17001_20
+755,Persons 12 to 17 years where income is below poverty level,8,N,ACS,(B17001_7+B17001_8+B17001_9)+(B17001_21+B17001_22+B17001_23)
+756,Persons 18 to 64 years where income is below poverty level,8,N,ACS,(B17001_10+B17001_11+B17001_12+B17001_13+B17001_14)+(B17001_24+B17001_25+B17001_26+B17001_27+B17001_28)
+757,Persons 65 to 74 years where income is below poverty level,8,N,ACS,B17001_15+B17001_29
+758,Persons 75 and over where income is below poverty level,8,N,ACS,B17001_16+B17001_30
+759,Population where income is at or above poverty level,8,N,ACS,B17001_31
+760,Persons under 5 years where income is at or above poverty level,8,N,ACS,B17001_33+B17001_47
+761,Persons 5 years where income is at or above poverty level,8,N,ACS,B17001_34+B17001_48
+762,Persons 6 to 11 years where income is at or above poverty level,8,N,ACS,B17001_35+B17001_49
+763,Persons 12 to 17 years where income is at or above poverty level,8,N,ACS,(B17001_36+B17001_37+B17001_38)+(B17001_50+B17001_51+B17001_52)
+764,Persons 18 to 64 years where income is at or above poverty level,8,N,ACS,(B17001_39+B17001_40+B17001_41+B17001_42+B17001_43)+(B17001_53+B17001_54+B17001_55+B17001_56+B17001_57)
+765,Persons 65 to 74 years where income is at or above poverty level,8,N,ACS,B17001_44+B17001_58
+766,Persons 75 and over where income is at or above poverty level,8,N,ACS,B17001_45+B17001_59
+767,Poverty level percent (rounded to 2 decimal places with decimal point),6,N,ACS,Case B17001_1 When 0 then 0 Else B17001_2*100.00/B17001_1  End 
+768,Total families - poverty status by family type,8,N,ACS,B17010_1
+769,Total families with income below the poverty level,8,N,ACS,B17010_2
+770,Total married-couple families with income below the poverty level,8,N,ACS,B17010_3
+771,Total married-couples with children U18/income below poverty level,8,N,ACS,B17010_4
+772,Total married-couples with children U5/income below poverty level,8,N,ACS,B17010_5
+773,Total married-couples with children U5 and 5 to 17/income below poverty level,8,N,ACS,B17010_6
+774,Total married-couples with children 5 to 17 years/income below poverty level,8,N,ACS,B17010_7
+775,Total married-couples with no related children under 18/income below poverty level,8,N,ACS,B17010_8
+776,Total other families with income below poverty level,8,N,ACS,B17010_9
+777,"Male householder, no wife with income below poverty level",8,N,ACS,B17010_10
+778,"Male householder, no wife with children U18/income below poverty level",8,N,ACS,B17010_11
+779,"Male householder, no wife with children U5 only/income below poverty level",8,N,ACS,B17010_12
+780,"Male householder, no wife with children U5 and 5 to 17/income below poverty level",8,N,ACS,B17010_13
+781,"Male householder, no wife with children 5 to 17 years/income below poverty level",8,N,ACS,B17010_14
+782,"Male householder, no wife with no related children under 18/income below poverty level",8,N,ACS,B17010_15
+783,"Female householder, no husband with income below poverty level",8,N,ACS,B17010_16
+784,"Female householder, no husband with children U18/income below poverty level",8,N,ACS,B17010_17
+785,"Female householder, no husband with children U5 only/income below poverty level",8,N,ACS,B17010_18
+786,"Female householder, no husband with children U5 and 5 to 17/income below poverty level",8,N,ACS,B17010_19
+787,"Female householder, no husband with children 5 to 17 years/income below poverty level",8,N,ACS,B17010_20
+788,"Female householder, no husband with no related children under 18/income below poverty level",8,N,ACS,B17010_21
+789,Total families with income at or above the poverty level,8,N,ACS,B17010_22
+790,Total married-couple families with income at or above the poverty level,8,N,ACS,B17010_23
+791,Total married-couples with children U18/income at or above poverty level,8,N,ACS,B17010_24
+792,Total married-couples with children U5/income at or above poverty level,8,N,ACS,B17010_25
+793,Total married-couples with children U5 and 5 to 17/income at or above poverty level,8,N,ACS,B17010_26
+794,Total married-couples with children 5 to 17 years/income at or above poverty level,8,N,ACS,B17010_27
+795,Total married-couples with no related children under 18/income at or above poverty level,8,N,ACS,B17010_28
+796,Total other families with income at or above poverty level,8,N,ACS,B17010_29
+797,"Male householder, no wife with income at or above poverty level",8,N,ACS,B17010_30
+798,"Male householder, no wife with children U18/income at or above poverty level",8,N,ACS,B17010_31
+799,"Male householder, no wife with children U5 only/income at or above poverty level",8,N,ACS,B17010_32
+800,"Male householder, no wife with children U5 and 5 to 17/income at or above poverty level",8,N,ACS,B17010_33
+801,"Male householder, no wife with children 5 to 17 years/income at or above poverty level",8,N,ACS,B17010_34
+802,"Male householder, no wife with no related children under 18/income at or above poverty level",8,N,ACS,B17010_35
+803,"Female householder, no husband with income at or above poverty level",8,N,ACS,B17010_36
+804,"Female householder, no husband with children U18/income at or above poverty level",8,N,ACS,B17010_37
+805,"Female householder, no husband with children U5 only/income at or above poverty level",8,N,ACS,B17010_38
+806,"Female householder, no husband with children U5 and 5 to 17/income at or above poverty level",8,N,ACS,B17010_39
+807,"Female householder, no husband with children 5 to 17 years/income at or above poverty level",8,N,ACS,B17010_40
+808,"Female householder, no husband with no related children under 18/income at or above poverty level",8,N,ACS,B17010_41
+809,Total households - poverty status,8,N,ACS,B17017_1
+810,Total households with income below poverty level,8,N,ACS,B17017_2
+811,Total family households with income below poverty level,8,N,ACS,B17017_3
+812,Total married couples with income below poverty level,8,N,ACS,B17017_4
+813,Total married couples with householder under 25 years with income below poverty level,8,N,ACS,B17017_5
+814,Total married couples with householder 25 to 44 years with income below poverty level,8,N,ACS,B17017_6
+815,Total married couples with householder 45 to 64 years with income below poverty level,8,N,ACS,B17017_7
+816,Total married couples with householder 65 and over with income below poverty level,8,N,ACS,B17017_8
+817,Total other family with income below poverty level,8,N,ACS,B17017_9
+818,Total other family male householder with income below poverty level,8,N,ACS,B17017_10
+819,Total other family male householder U25 with income below poverty level,8,N,ACS,B17017_11
+820,Total other family male householder 25 to 44 years with income below poverty level,8,N,ACS,B17017_12
+821,Total other family male householder 45 to 64 years with income below poverty level,8,N,ACS,B17017_13
+822,Total other family male householder 65 years and over with income below poverty level,8,N,ACS,B17017_14
+823,Total other family female householder with income below poverty level,8,N,ACS,B17017_15
+824,Total other family female householder U25 with income below poverty level,8,N,ACS,B17017_16
+825,Total other family female householder 25 to 44 years with income below poverty level,8,N,ACS,B17017_17
+826,Total other family female householder 45 to 64 years with income below poverty level,8,N,ACS,B17017_18
+827,Total other family female householder 65 years and over with income below poverty level,8,N,ACS,B17017_19
+828,Total non-family households with income below poverty level,8,N,ACS,B17017_20
+829,Total non-family male households with income below poverty level,8,N,ACS,B17017_21
+830,Total non-family male householder U25 with income below poverty level,8,N,ACS,B17017_22
+831,Total non-family male householder 25 to 44 years with income below poverty level,8,N,ACS,B17017_23
+832,Total non-family male householder 45 to 64 years with income below poverty level,8,N,ACS,B17017_24
+833,Total non-family male householder 65 years and over with income below poverty level,8,N,ACS,B17017_25
+834,Total non-family female households with income below poverty level,8,N,ACS,B17017_26
+835,Total non-family female householder U25 with income below poverty level,8,N,ACS,B17017_27
+836,Total non-family female householder 25 to 44 years with income below poverty level,8,N,ACS,B17017_28
+837,Total non-family female householder 45 to 64 years with income below poverty level,8,N,ACS,B17017_29
+838,Total non-family female householder 65 years and over with income below poverty level,8,N,ACS,B17017_30
+839,Total households with income above poverty level,8,N,ACS,B17017_31
+840,Total family households with income above poverty level,8,N,ACS,B17017_32
+841,Total married couples with income above poverty level,8,N,ACS,B17017_33
+842,Total married couples with householder under 25 years with income above poverty level,8,N,ACS,B17017_34
+843,Total married couples with householder 25 to 44 years with income above poverty level,8,N,ACS,B17017_35
+844,Total married couples with householder 45 to 64 years with income above poverty level,8,N,ACS,B17017_36
+845,Total married couples with householder 65 and over with income above poverty level,8,N,ACS,B17017_37
+846,Total other family with income above poverty level,8,N,ACS,B17017_38
+847,Total other family male householder with income above poverty level,8,N,ACS,B17017_39
+848,Total other family male householder U25 with income above poverty level,8,N,ACS,B17017_40
+849,Total other family male householder 25 to 44 years with income above poverty level,8,N,ACS,B17017_41
+850,Total other family male householder 45 to 64 years with income above poverty level,8,N,ACS,B17017_42
+851,Total other family male householder 65 years and over with income above poverty level,8,N,ACS,B17017_43
+852,Total other family female householder with income above poverty level,8,N,ACS,B17017_44
+853,Total other family female householder U25 with income above poverty level,8,N,ACS,B17017_45
+854,Total other family female householder 25 to 44 years with income above poverty level,8,N,ACS,B17017_46
+855,Total other family female householder 45 to 64 years with income above poverty level,8,N,ACS,B17017_47
+856,Total other family female householder 65 years and over with income above poverty level,8,N,ACS,B17017_48
+857,Total non-family households with income above poverty level,8,N,ACS,B17017_49
+858,Total non-family male households with income above poverty level,8,N,ACS,B17017_50
+859,Total non-family male householder U25 with income above poverty level,8,N,ACS,B17017_51
+860,Total non-family male householder 25 to 44 years with income above poverty level,8,N,ACS,B17017_52
+861,Total non-family male householder 45 to 64 years with income above poverty level,8,N,ACS,B17017_53
+862,Total non-family male householder 65 years and over with income above poverty level,8,N,ACS,B17017_54
+863,Total non-family female households with income above poverty level,8,N,ACS,B17017_55
+864,Total non-family female householder U25 with income above poverty level,8,N,ACS,B17017_56
+865,Total non-family female householder 25 to 44 years with income above poverty level,8,N,ACS,B17017_57
+866,Total non-family female householder 45 to 64 years with income above poverty level,8,N,ACS,B17017_58
+867,Total non-family female householder 65 years and over with income above poverty level,8,N,ACS,B17017_59
+868,Total housing unit,8,N,ACS,B25001_1
+869,Total housing unit - urban and rural,8,N,NA,
+870,Total housing unit - urban,8,N,NA, H0020002 (Island Areas Only)
+871,Total housing unit - inside urbanized areas,8,N,NA,
+872,Total housing unit - inside urbanized clusters,8,N,NA,
+873,Total housing unit - rural,8,N,NA, H0020005 (Island Areas Only)
+874,Total housing unit - farm,8,N,NA,
+875,Total housing unit - nonfarm,8,N,NA,
+876,Total housing unit - occupancy status,8,N,ACS,B25002_1
+877,Total occupied housing unit - occupancy status,8,N,ACS,B25002_2
+878,Total vacant housing unit - occupancy status,8,N,ACS,B25002_3
+879,Total occupied housing unit - tenure,8,N,ACS,B25003_1
+880,Total owner occupied housing unit - tenure,8,N,ACS,B25003_2
+881,Total renter occupied housing unit - tenure,8,N,ACS,B25003_3
+882,Total vacant housing unit - vacancy status,8,N,ACS,B25004_1
+883,Total vacant housing unit for rent,8,N,ACS,B25004_2
+884,Total vacant housing unit for sale only,8,N,ACS,B25004_4
+885,"Total housing unit rented or sold, not occupied",8,N,ACS,B25004_3+B25004_5
+886,"Total housing unit for seasonal, recreational, or occasional use",8,N,ACS,B25004_6
+887,Total housing unit for migrant workers,8,N,ACS,B25004_7
+888,Total housing unit - other vacant,8,N,ACS,B25004_8
+889,Total housing unit - unit in structure,8,N,ACS,B25024_1
+890,Total detached housing unit,8,N,ACS,B25024_2
+891,Total attached housing unit,8,N,ACS,B25024_3
+892,Total housing unit - 2,8,N,ACS,B25024_4
+893,Total housing unit - 3 or 4,8,N,ACS,B25024_5
+894,Total housing unit - 5 to 9,8,N,ACS,B25024_6
+895,Total housing unit - 10 to 19,8,N,ACS,B25024_7
+896,Total housing unit - 20 to 49,8,N,ACS,B25024_8
+897,Total housing unit - 50 or more,8,N,ACS,B25024_9
+898,Total housing unit - mobile homes,8,N,ACS,B25024_10
+899,"Total housing unit - boat, rv, van",8,N,ACS,B25024_11
+900,Total housing unit - 1 to 4,8,N,ACS,B25024_2+B25024_3+B25024_4+B25024_5+B25024_10+B25024_11
+901,Total housing unit - multi family 5 or more,8,N,ACS,B25024_6+B25024_7+B25024_8+B25024_9
+902,Total housing unit - vacant,8,N,NA,
+903,Total detached housing unit vacant,8,N,NA,
+904,Total attached housing unit vacant,8,N,NA,
+905,Total housing unit vacant - 2,8,N,NA,
+906,Total housing unit vacant - 3 or 4,8,N,NA,
+907,Total housing unit vacant - 5 to 9,8,N,NA,
+908,Total housing unit vacant - 10 to 19,8,N,NA,
+909,Total housing unit vacant - 20 to 49,8,N,NA,
+910,Total housing unit vacant - 50 or more,8,N,NA,
+911,Total housing unit vacant - mobile homes,8,N,NA,
+912,"Total housing unit vacant - boat, rv, van",8,N,NA,
+913,Total housing unit vacant - 1 to 4,8,N,NA,
+914,Total housing unit vacant - multi family 5 or more,8,N,NA,
+915,Total occupied housing unit - tenure,8,N,ACS,B25032_1
+916,Total housing unit - owner occupied,8,N,ACS,B25032_2
+917,Total detached housing unit owner occupied,8,N,ACS,B25032_3
+918,Total attached housing unit owner occupied,8,N,ACS,B25032_4
+919,Total housing unit owner occupied - 2,8,N,ACS,B25032_5
+920,Total housing unit owner occupied - 3 or 4,8,N,ACS,B25032_6
+921,Total housing unit owner occupied - 5 to 9,8,N,ACS,B25032_7
+922,Total housing unit owner occupied - 10 to 19,8,N,ACS,B25032_8
+923,Total housing unit owner occupied - 20 to 49,8,N,ACS,B25032_9
+924,Total housing unit owner occupied - 50 or more,8,N,ACS,B25032_10
+925,Total housing unit owner occupied - mobile homes,8,N,ACS,B25032_11
+926,"Total housing unit owner occupied - boat, rv, van",8,N,ACS,B25032_12
+927,Total housing unit owner occupied - 1 to 4,8,N,ACS,B25032_3 + B25032_4 + B25032_5 + B25032_6 + B25032_11 + B25032_12
+928,Total housing unit owner occupied - multi family 5 or more,8,N,ACS,B25032_7+B25032_8+B25032_9+B25032_10
+929,Total housing unit - renter occupied,8,N,ACS,B25032_13
+930,Total detached housing unit renter occupied,8,N,ACS,B25032_14
+931,Total attached housing unit renter occupied,8,N,ACS,B25032_15
+932,Total housing unit renter occupied - 2,8,N,ACS,B25032_16
+933,Total housing unit renter occupied - 3 or 4,8,N,ACS,B25032_17
+934,Total housing unit renter occupied - 5 to 9,8,N,ACS,B25032_18
+935,Total housing unit renter occupied - 10 to 19,8,N,ACS,B25032_19
+936,Total housing unit renter occupied - 20 to 49,8,N,ACS,B25032_20
+937,Total housing unit renter occupied - 50 or more,8,N,ACS,B25032_21
+938,Total housing unit renter occupied - mobile homes,8,N,ACS,B25032_22
+939,"Total housing unit renter occupied - boat, rv, van",8,N,ACS,B25032_23
+940,Total housing unit renter occupied - 1 to 4,8,N,ACS,B25032_14+B25032_15+B25032_16+B25032_17+B25032_22+B25032_23
+941,Total housing unit renter occupied - multi family 5 or more,8,N,Other,B25032_18+B25032_19+B25032_20+B25032_21
+942,Total housing unit - year structure built,8,N,ACS,B25034_1
+943,Housing Unit built 2010 or Later = (Housing Unit Built 2014 or later + Housing Unit Built 2010 to 2013),8,N,ACS,B25034_2 + B25034_3
+944,Housing Unit built 2000 to 2009,8,N,ACS,B25034_4
+945,Housing Unit built 1990 to 1999,8,N,ACS,B25034_5
+946,Housing unit built 1980 to 1989,8,N,ACS,B25034_6
+947,Housing unit built 1970 to 1979,8,N,ACS,B25034_7
+948,Housing unit built 1960 to 1969,8,N,ACS,B25034_8
+949,Housing unit built 1950 to 1959,8,N,ACS,B25034_9
+950,Housing unit built 1940 to 1949,8,N,ACS,B25034_10
+951,Housing unit built 1939 or earlier,8,N,ACS,B25034_11
+952,Median year structure built,8,N,ACS,B25035_1
+953,Median house age,8,N,ACS,"When B25035_1 = 0 Then 0, Else 2015-B25035_1"
+954,Occupied housing unit - tenure by year householder moved into unit,8,N,ACS,B25038_1
+955,Owner occupied housing unit-tenure by year householder moved into unit,8,N,ACS,B25038_2
+956,Owner occupied housing unit moved in 2015 or later,8,N,ACS,B25038_3
+957,Owner occupied housing unit moved in 2010 to 2014,8,N,ACS,B25038_4
+958,Owner occupied housing unit moved in 2000 to 2009,8,N,ACS,B25038_5
+959,Owner occupied housing unit moved in 1990 to 1999,8,N,ACS,B25038_6
+960,Owner occupied housing unit moved in 1980 to 1989,8,N,ACS,B25038_7
+961,Owner occupied housing unit moved in 1979 or earlier,8,N,ACS,B25038_8
+962,Renter occupied housing unit-tenure by year householder moved into unit,8,N,ACS,B25038_9
+963,Renter occupied housing unit moved in 2015 or later,8,N,ACS,B25038_10
+964,Renter occupied housing unit moved in 2010 to 2014,8,N,ACS,B25038_11
+965,Renter occupied housing unit moved in 2000 to 2009,8,N,ACS,B25038_12
+966,Renter occupied housing unit moved in 1990 to 1999,8,N,ACS,B25038_13
+967,Renter occupied housing unit moved in 1980 to 1989,8,N,ACS,B25038_14
+968,Renter occupied housing unit moved in 1979 or earlier,8,N,ACS,B25038_15
+969,Total housing unit with plumbing facilities,8,N,ACS,B25047_1
+970,Total housing unit with complete plumbing facilities,8,N,ACS,B25047_2
+971,Total housing unit lacking complete plumbing facilities,8,N,ACS,B25047_3
+972,Total occupied housing unit - tenure by plumbing facilities,8,N,ACS,B25049_1
+973,Total owner occupied housing unit - tenure by plumbing facilities,8,N,ACS,B25049_2
+974,Total owner occupied housing unit with complete plumbing facilities,8,N,ACS,B25049_3
+975,Total owner occupied housing unit lacking complete plumbing facilities,8,N,ACS,B25049_4
+976,Total renter occupied housing unit - tenure by plumbing facilities,8,N,ACS,B25049_5
+977,Total renter occupied housing unit with complete plumbing facilities,8,N,ACS,B25049_6
+978,Total renter occupied housing unit lacking complete plumbing facilities,8,N,ACS,B25049_7
+979,Total specified renter-occupied housing unit,8,N,ACS,B25063_1
+980,Total renter-occupied housing unit with cash rent,8,N,ACS,B25063_2
+981,Total renter-occupied housing unit with cash rent less than $100,8,N,ACS,B25063_3
+982,Total renter-occupied housing unit with cash rent $100 to $149,8,N,ACS,B25063_4
+983,Total renter-occupied housing unit with cash rent $150 to $199,8,N,ACS,B25063_5
+984,Total renter-occupied housing unit with cash rent $200 to $249,8,N,ACS,B25063_6
+985,Total renter-occupied housing unit with cash rent $250 to $299,8,N,ACS,B25063_7
+986,Total renter-occupied housing unit with cash rent $300 to $349,8,N,ACS,B25063_8
+987,Total renter-occupied housing unit with cash rent $350 to $399,8,N,ACS,B25063_9
+988,Total renter-occupied housing unit with cash rent $400 to $449,8,N,ACS,B25063_10
+989,Total renter-occupied housing unit with cash rent $450 to $499,8,N,ACS,B25063_11
+990,Total renter-occupied housing unit with cash rent $500 to $549,8,N,ACS,B25063_12
+991,Total renter-occupied housing unit with cash rent $550 to $599,8,N,ACS,B25063_13
+992,Total renter-occupied housing unit with cash rent $600 to $649,8,N,ACS,B25063_14
+993,Total renter-occupied housing unit with cash rent $650 to $699,8,N,ACS,B25063_15
+994,Total renter-occupied housing unit with cash rent $700 to $749,8,N,ACS,B25063_16
+995,Total renter-occupied housing unit with cash rent $750 to $799,8,N,ACS,B25063_17
+996,Total renter-occupied housing unit with cash rent $800 to $899,8,N,ACS,B25063_18
+997,Total renter-occupied housing unit with cash rent $900 to $999,8,N,ACS,B25063_19
+998,Total renter-occupied housing unit with cash rent $1000 to $1249,8,N,ACS,B25063_20
+999,Total renter-occupied housing unit with cash rent $1250 to $1499,8,N,ACS,B25063_21
+1000,Total renter-occupied housing unit with cash rent $1500 to $1999,8,N,ACS,B25063_22
+1001,"Total renter-occupied housing unit with cash rent $2000 or more ($2,000 to $2,499 + $2,500 to $2,999 + $3,000 to $3,499 + $3,500 or more)",8,N,ACS,B25063_23 + B25063_24 + B25063_25 + B25063_26
+1002,Total renter-occupied housing unit with no cash rent,8,N,ACS,B25063_27
+1003,Median gross rent - dollars,8,N,ACS,B25064_1
+1004,Total renter-occupied housing unit - household income by gross rent,8,N,ACS, B25074_1
+1005,"Total renter-occupied housing unit with householder income less than $10,000",8,N,ACS, B25074_2
+1006,"Total renter-occupied housing unit with householder income less than $10,000 - < 20 percent",8,N,ACS, B25074_3
+1007,"Renter-occupied housing unit with householder income less than $10,000 - 20 to 24.9 percent",8,N,ACS, B25074_4
+1008,"Renter-occupied housing unit with householder income less than $10,000 - 25 to 29.9 percent",8,N,ACS, B25074_5
+1009,"Renter-occupied housing unit with householder income less than $10,000 - 30 to 34.9 percent",8,N,ACS, B25074_6
+1010,"Renter-occupied housing unit with householder income less than $10,000 - 35 or more percent = (less than $10,000 35.0 to 39.9 percent + less than $10,000 40.0 to 49.9 percent + less than $10,000 50.0 percent or more)",8,N,ACS,B25074_7 + B25074_8 + B25074_9
+1011,"Renter-occupied housing unit with householder income less than $10,000 - not computed",8,N,ACS,B25074_10
+1012,"Renter-occupied housing unit with householder income $10,000-$19,999",8,N,ACS,B25074_11
+1013,"Renter-occupied housing unit with householder income $10,000-$19,999 - < 20 percent",8,N,ACS,B25074_12
+1014,"Renter-occupied housing unit with householder income $10,000-$19,999 - 20 to 24.9 percent",8,N,ACS,B25074_13
+1015,"Renter-occupied housing unit with householder income $10,000-$19,999 - 25 to 29.9 percent",8,N,ACS,B25074_14
+1016,"Renter-occupied housing unit with householder income $10,000-$19,999 - 30 to 34.9 percent",8,N,ACS,B25074_15
+1017,"Renter-occupied housing unit with householder income $10,000-$19,999 - 35 or more percent = ($10,000-$19,999 35.0 to 39.9 percent + $10,000-$19,999 40.0 to 49.9 percent + $10,000-$19,999 50.0 percent or more)",8,N,ACS,B25074_16 + B25074_17 + B25074_18
+1018,"Renter-occupied housing unit with householder income $10,000-$19,999 -not computed",8,N,ACS,B25074_19
+1019,"Renter-occupied housing unit with householder income $20,000-$34,999",8,N,ACS,B25074_20
+1020,"Renter-occupied housing unit with householder income $20,000-$34,999 - < 20 percent",8,N,ACS,B25074_21
+1021,"Renter-occupied housing unit with householder income $20,000-$34,999 - 20 to 24.9 percent",8,N,ACS,B25074_22
+1022,"Renter-occupied housing unit with householder income $20,000-$34,999 - 25 to 29.9 percent",8,N,ACS,B25074_23
+1023,"Renter-occupied housing unit with householder income $20,000-$34,999 - 30 to 34.9 percent",8,N,ACS,B25074_24
+1024,"Renter-occupied housing unit with householder income $20,000-$34,999 - 35 or more percent = ($20,000 to $34,999 35.0 to 39.9 percent + $20,000 to $34,999 40.0 to 49.9 percent + $20,000 to $34,999 50.0 percent or more)",8,N,ACS,B25074_25 + B25074_26 + B25074_27
+1025,"Renter-occupied housing unit with householder income $20,000-$34,999 -not computed",8,N,ACS,B25074_28
+1026,"Renter-occupied housing unit with householder income $35,000-$49,999",8,N,ACS,B25074_29
+1027,"Renter-occupied housing unit with householder income $35,000-$49,999 - < 20 percent",8,N,ACS,B25074_30
+1028,"Renter-occupied housing unit with householder income $35,000-$49,999 - 20 to 24.9 percent",8,N,ACS,B25074_31
+1029,"Renter-occupied housing unit with householder income $35,000-$49,999 - 25 to 29.9 percent",8,N,ACS,B25074_32
+1030,"Renter-occupied housing unit with householder income $35,000-$49,999 - 30 to 34.9 percent",8,N,ACS,B25074_33
+1031,"Renter-occupied housing unit with householder income $35,000-$49,999 - 35 or more percent = ($35,000-$49,999 35.0 to 39.9 percent + $35,000-$49,999 40.0 to 49.9 percent + $35,000-$49,999 50.0 percent or more)",8,N,ACS,B25074_34 + B25074_35 + B25074_36
+1032,"Renter-occupied housing unit with householder income $35,000-$49,999 -not computed",8,N,ACS,B25074_37
+1033,"Renter-occupied housing unit with householder income $50,000-$74,999",8,N,ACS,B25074_38
+1034,"Renter-occupied housing unit with householder income $50,000-$74,999 - < 20 percent",8,N,ACS,B25074_39
+1035,"Renter-occupied housing unit with householder income $50,000-$74,999 - 20 to 24.9 percent",8,N,ACS,B25074_40
+1036,"Renter-occupied housing unit with householder income $50,000-$74,999 - 25 to 29.9 percent",8,N,ACS,B25074_41
+1037,"Renter-occupied housing unit with householder income $50,000-$74,999 - 30 to 34.9 percent",8,N,ACS,B25074_42
+1038,"Renter-occupied housing unit with householder income $50,000-$74,999 - 35 or more percent = ($50,000-$74,999 35.0 to 39.9 percent + $50,000-$74,999 40.0 to 49.9 percent + $50,000-$74,999 50.0 percent or more)",8,N,ACS,B25074_43 + B25074_44 + B25074_45
+1039,"Renter-occupied housing unit with householder income $50,000-$74,999 -not computed",8,N,ACS,B25074_46
+1040,"Renter-occupied housing unit with householder income $75,000-$99,999",8,N,ACS,B25074_47
+1041,"Renter-occupied housing unit with householder income $75,000-$99,999 - < 20 percent",8,N,ACS,B25074_48
+1042,"Renter-occupied housing unit with householder income $75,000-$99,999 - 20 to 24.9 percent",8,N,ACS,B25074_49
+1043,"Renter-occupied housing unit with householder income $75,000-$99,999 - 25 to 29.9 percent",8,N,ACS,B25074_50
+1044,"Renter-occupied housing unit with householder income $75,000-$99,999 - 30 to 34.9 percent",8,N,ACS,B25074_51
+1045,"Renter-occupied housing unit with householder income $75,000-$99,999 - 35 or more percent = ($75,000-$99,999 35.0 to 39.9 percent + $75,000-$99,999 40.0 to 49.9 percent  + $75,000-$99,999 50.0 percent or more)",8,N,ACS,B25074_52 + B25074_53 + B25074_54
+1046,"Renter-occupied housing unit with householder income $75,000-$99,999 -not computed",8,N,ACS,B25074_55
+1047,"Renter-occupied housing unit with householder income $100,000 or more",8,N,ACS,B25074_56
+1048,"Renter-occupied housing unit with householder income $100,000 or more - < 20 percent",8,N,ACS,B25074_57
+1049,"Renter-occupied housing unit with householder income $100,000 or more - 20 to 24.9 percent",8,N,ACS,B25074_58
+1050,"Renter-occupied housing unit with householder income $100,000 or more - 25 to 29.9 percent",8,N,ACS,B25074_59
+1051,"Renter-occupied housing unit with householder income $100,000 or more - 30 to 34.9 percent",8,N,ACS,B25074_60
+1052,"Renter-occupied housing unit with householder income $100,000 or more - 35 or more percent = ($100,000 or more 35.0 to 39.9 percent + $100,000 or more 40.0 to 49.9 percent + $100,000 or more 50.0 percent or more)",8,N,ACS,B25074_61 + B25074_62 + B25074_63
+1053,"Renter-occupied housing unit with householder income $100,000 or more -not computed",8,N,ACS,B25074_64
+1054,Owner occupied unit- mortgage status,8,N,ACS,B25081_1
+1055,"Total occupied unit with mortgage, contract to purchase or similar debt",8,N,ACS,B25081_2
+1056,Total occupied unit with 2nd mortgage or equity loan - not both,8,N,ACS,B25081_3
+1057,Total occupied unit with 2nd mortgage only,8,N,ACS,B25081_4
+1058,Total occupied unit with home equity loan only,8,N,ACS,B25081_5
+1059,Total occupied unit with 2nd mortgage and home equity loan,8,N,ACS,B25081_6
+1060,Total occupied unit with no 2nd mortgage or home equity loan,8,N,ACS,B25081_7
+1061,Total occupied unit with no mortgage,8,N,ACS,B25081_8
+1062,Total owner occupied unit - by value,8,N,ACS,B25075_1
+1063,"Total owner occupied unit less than $10,000",8,N,ACS,B25075_2
+1064,"Total owner occupied unit $10,000-$14,999",8,N,ACS,B25075_3
+1065,"Total owner occupied unit $15,000-$19,999",8,N,ACS,B25075_4
+1066,"Total owner occupied unit $20,000-$24,999",8,N,ACS,B25075_5
+1067,"Total owner occupied unit $25,000-$29,999",8,N,ACS,B25075_6
+1068,"Total owner occupied unit $30,000-$34,999",8,N,ACS,B25075_7
+1069,"Total owner occupied unit $35,000-$39,999",8,N,ACS,B25075_8
+1070,"Total owner occupied unit $40,000-$49,999",8,N,ACS,B25075_9
+1071,"Total owner occupied unit $50,000-$59,999",8,N,ACS,B25075_10
+1072,"Total owner occupied unit $60,000-$69,999",8,N,ACS,B25075_11
+1073,"Total owner occupied unit $70,000-$79,999",8,N,ACS,B25075_12
+1074,"Total owner occupied unit $80,000-$89,999",8,N,ACS,B25075_13
+1075,"Total owner occupied unit $90,000-$99,999",8,N,ACS,B25075_14
+1076,"Total owner occupied unit $100,000-$124,999",8,N,ACS,B25075_15
+1077,"Total owner occupied unit $125,000-$149,999",8,N,ACS,B25075_16
+1078,"Total owner occupied unit $150,000-$174,999",8,N,ACS,B25075_17
+1079,"Total owner occupied unit $175,000-$199,999",8,N,ACS,B25075_18
+1080,"Total owner occupied unit $200,000-$249,999",8,N,ACS,B25075_19
+1081,"Total owner occupied unit $250,000-$299,999",8,N,ACS,B25075_20
+1082,"Total owner occupied unit $300,000-$399,999",8,N,ACS,B25075_21
+1083,"Total owner occupied unit $400,000-$499,999",8,N,ACS,B25075_22
+1084,"Total owner occupied unit $500,000-$749,999",8,N,ACS,B25075_23
+1085,"Total owner occupied unit $750,000-$999,999",8,N,ACS,B25075_24
+1086,"Total owner occupied unit $1,000,000 or more (1,000,000 to $1,499,999, $1,500,000 to $1,999,999, and $2,000,000 or more)",8,N,ACS,B25075_25 + B25075_26 + B25075_27
+1087,Median value (dollars) for all owner occupied housing unit,8,N,ACS,B25077_1
+1088,Total white unit in structure,8,N,ACS,B25032A_1
+1089,Total white detached unit,8,N,ACS,B25032A_2
+1090,Total white attached unit,8,N,ACS,B25032A_3
+1091,Total white 2 unit,8,N,ACS,B25032A_4
+1092,Total white 3 or 4 unit,8,N,ACS,B25032A_5
+1093,Total white 5 to 9 unit,8,N,ACS,B25032A_6
+1094,Total white 10 to 19 unit,8,N,ACS,B25032A_7
+1095,Total white 20 to 49 unit,8,N,ACS,B25032A_8
+1096,Total white 50 or more unit,8,N,ACS,B25032A_9
+1097,Total white mobile homes,8,N,ACS,B25032A_10
+1098,"Total white boat, RV, Van",8,N,ACS,B25032A_11
+1099,Total white 1 to 4 unit,8,N,ACS,B25032A_2+B25032A_3+B25032A_4+B25032A_5+B25032A_10+B25032A_11
+1100,Total white multi family - 5 or more,8,N,ACS,B25032A_6+B25032A_7+B25032A_8+B25032A_9
+1101,Total black unit in structure,8,N,ACS,B25032B_1
+1102,Total black detached unit,8,N,ACS,B25032B_2
+1103,Total black attached unit,8,N,ACS,B25032B_3
+1104,Total black 2 unit,8,N,ACS,B25032B_4
+1105,Total black 3 or 4 unit,8,N,ACS,B25032B_5
+1106,Total black 5 to 9 unit,8,N,ACS,B25032B_6
+1107,Total black 10 to 19 unit,8,N,ACS,B25032B_7
+1108,Total black 20 to 49 unit,8,N,ACS,B25032B_8
+1109,Total black 50 or more unit,8,N,ACS,B25032B_9
+1110,Total black mobile homes,8,N,ACS,B25032B_10
+1111,"Total black boat, RV, Van",8,N,ACS,B25032B_11
+1112,Total black 1 to 4 unit,8,N,ACS,B25032B_2+B25032B_3+B25032B_4+B25032B_5+B25032B_10+B25032B_11
+1113,Total black multi family - 5 or more,8,N,ACS,B25032B_6+B25032B_7+B25032B_8+B25032B_9
+1114,Total American Indian/Alaska Native unit in structure,8,N,ACS,B25032C_1
+1115,Total American Indian/Alaska Native detached unit,8,N,ACS,B25032C_2
+1116,Total American Indian/Alaska Native attached unit,8,N,ACS,B25032C_3
+1117,Total American Indian/Alaska Native 2 unit,8,N,ACS,B25032C_4
+1118,Total American Indian/Alaska Native 3 or 4 unit,8,N,ACS,B25032C_5
+1119,Total American Indian/Alaska Native 5 to 9 unit,8,N,ACS,B25032C_6
+1120,Total American Indian/Alaska Native 10 to 19 unit,8,N,ACS,B25032C_7
+1121,Total American Indian/Alaska Native 20 to 49 unit,8,N,ACS,B25032C_8
+1122,Total American Indian/Alaska Native 50 or more unit,8,N,ACS,B25032C_9
+1123,Total American Indian/Alaska Native mobile homes,8,N,ACS,B25032C_10
+1124,"Total American Indian/Alaska Native boat, RV, Van",8,N,ACS,B25032C_11
+1125,Total American Indian/Alaska Native 1 to 4 unit,8,N,ACS,B25032C_2+B25032C_3+B25032C_4+B25032C_5+B25032C_10+B25032C_11
+1126,Total American Indian/Alaska Native multi family - 5 or more,8,N,ACS,B25032C_6+B25032C_7+B25032C_8+B25032C_9
+1127,Total Asian unit in structure,8,N,ACS,B25032D_1
+1128,Total Asian detached unit,8,N,ACS,B25032D_2
+1129,Total Asian attached unit,8,N,ACS,B25032D_3
+1130,Total Asian 2 unit,8,N,ACS,B25032D_4
+1131,Total Asian 3 or 4 unit,8,N,ACS,B25032D_5
+1132,Total Asian 5 to 9 unit,8,N,ACS,B25032D_6
+1133,Total Asian 10 to 19 unit,8,N,ACS,B25032D_7
+1134,Total Asian 20 to 49 unit,8,N,ACS,B25032D_8
+1135,Total Asian 50 or more unit,8,N,ACS,B25032D_9
+1136,Total Asian mobile homes,8,N,ACS,B25032D_10
+1137,"Total Asian boat, RV, Van",8,N,ACS,B25032D_11
+1138,Total Asian 1 to 4 unit,8,N,ACS,B25032D_2+B25032D_3+B25032D_4+B25032D_5+B25032D_10+B25032D_11
+1139,Total Asian multi family - 5 or more,8,N,ACS,B25032D_6+B25032D_7+B25032D_8+B25032D_9
+1140,Total Hawaiian/Pacific Islander unit in structure,8,N,ACS,B25032E_1
+1141,Total Hawaiian/Pacific Islander detached unit,8,N,ACS,B25032E_2
+1142,Total Hawaiian/Pacific Islander attached unit,8,N,ACS,B25032E_3
+1143,Total Hawaiian/Pacific Islander 2 unit,8,N,ACS,B25032E_4
+1144,Total Hawaiian/Pacific Islander 3 or 4 unit,8,N,ACS,B25032E_5
+1145,Total Hawaiian/Pacific Islander 5 to 9 unit,8,N,ACS,B25032E_6
+1146,Total Hawaiian/Pacific Islander 10 to 19 unit,8,N,ACS,B25032E_7
+1147,Total Hawaiian/Pacific Islander 20 to 49 unit,8,N,ACS,B25032E_8
+1148,Total Hawaiian/Pacific Islander 50 or more unit,8,N,ACS,B25032E_9
+1149,Total Hawaiian/Pacific Islander mobile homes,8,N,ACS,B25032E_10
+1150,"Total Hawaiian/Pacific Islander boat, RV, Van",8,N,ACS,B25032E_11
+1151,Total Hawaiian/Pacific Islander 1 to 4 unit,8,N,ACS,B25032E_2+B25032E_3+B25032E_4+B25032E_5+B25032E_10+B25032E_11
+1152,Total Hawaiian/Pacific Islander multi family - 5 or more,8,N,ACS,B25032E_6+B25032E_7+B25032E_8+B25032E_9
+1153,Total some other race unit in structure,8,N,ACS,B25032F_1
+1154,Total some other race detached unit,8,N,ACS,B25032F_2
+1155,Total some other race attached unit,8,N,ACS,B25032F_3
+1156,Total some other race 2 unit,8,N,ACS,B25032F_4
+1157,Total some other race 3 or 4 unit,8,N,ACS,B25032F_5
+1158,Total some other race 5 to 9 unit,8,N,ACS,B25032F_6
+1159,Total some other race 10 to 19 unit,8,N,ACS,B25032F_7
+1160,Total some other race 20 to 49 unit,8,N,ACS,B25032F_8
+1161,Total some other race 50 or more unit,8,N,ACS,B25032F_9
+1162,Total some other race mobile homes,8,N,ACS,B25032F_10
+1163,"Total some other race boat, RV, Van",8,N,ACS,B25032F_11
+1164,Total some other race 1 to 4 unit,8,N,ACS,B25032F_2+B25032F_3+B25032F_4+B25032F_5+B25032F_10+B25032F_11
+1165,Total some other race multi family - 5 or more,8,N,ACS,B25032F_6+B25032F_7+B25032F_8+B25032F_9
+1166,Total two or more races unit in structure,8,N,ACS,B25032G_1
+1167,Total two or more races detached unit,8,N,ACS,B25032G_2
+1168,Total two or more races attached unit,8,N,ACS,B25032G_3
+1169,Total two or more races 2 unit,8,N,ACS,B25032G_4
+1170,Total two or more races 3 or 4 unit,8,N,ACS,B25032G_5
+1171,Total two or more races 5 to 9 unit,8,N,ACS,B25032G_6
+1172,Total two or more races 10 to 19 unit,8,N,ACS,B25032G_7
+1173,Total two or more races 20 to 49 unit,8,N,ACS,B25032G_8
+1174,Total two or more races 50 or more unit,8,N,ACS,B25032G_9
+1175,Total two or more races mobile homes,8,N,ACS,B25032G_10
+1176,"Total two or more races boat, RV, Van",8,N,ACS,B25032G_11
+1177,Total two or more races 1 to 4 unit,8,N,ACS,B25032G_2+B25032G_3+B25032G_4+B25032G_5+B25032G_10+B25032G_11
+1178,Total two or more races multi family - 5 or more,8,N,ACS,B25032G_6+B25032G_7+B25032G_8+B25032G_9
+1179,Total Hispanic unit in structure,8,N,ACS,B25032I_1
+1180,Total Hispanic detached unit,8,N,ACS,B25032I_2
+1181,Total Hispanic attached unit,8,N,ACS,B25032I_3
+1182,Total Hispanic 2 unit,8,N,ACS,B25032I_4
+1183,Total Hispanic 3 or 4 unit,8,N,ACS,B25032I_5
+1184,Total Hispanic 5 to 9 unit,8,N,ACS,B25032I_6
+1185,Total Hispanic 10 to 19 unit,8,N,ACS,B25032I_7
+1186,Total Hispanic 20 to 49 unit,8,N,ACS,B25032I_8
+1187,Total Hispanic 50 or more unit,8,N,ACS,B25032I_9
+1188,Total Hispanic mobile homes,8,N,ACS,B25032I_10
+1189,"Total Hispanic boat, RV, Van",8,N,ACS,B25032I_11
+1190,Total Hispanic 1 to 4 unit,8,N,ACS,B25032I_2+B25032I_3+B25032I_4+B25032I_5+B25032I_10+B25032I_11
+1191,Total Hispanic multi family - 5 or more,8,N,ACS,B25032I_6+B25032I_7+B25032I_8+B25032I_9
+1192,"Total White, not Hispanic unit in structure",8,N,ACS,B25032H_1
+1193,"Total White, not Hispanic detached unit",8,N,ACS,B25032H_2
+1194,"Total White, not Hispanic attached unit",8,N,ACS,B25032H_3
+1195,"Total White, not Hispanic 2 unit",8,N,ACS,B25032H_4
+1196,"Total White, not Hispanic 3 or 4 unit",8,N,ACS,B25032H_5
+1197,"Total White, not Hispanic 5 to 9 unit",8,N,ACS,B25032H_6
+1198,"Total White, not Hispanic 10 to 19 unit",8,N,ACS,B25032H_7
+1199,"Total White, not Hispanic 20 to 49 unit",8,N,ACS,B25032H_8
+1200,"Total White, not Hispanic 50 or more unit",8,N,ACS,B25032H_9
+1201,"Total White, not Hispanic mobile homes",8,N,ACS,B25032H_10
+1202,"Total White, not Hispanic boat, RV, Van",8,N,ACS,B25032H_11
+1203,"Total White, not Hispanic 1 to 4 unit",8,N,ACS,B25032H_2+B25032H_3+B25032H_4+B25032H_5+B25032H_10+B25032H_11
+1204,"Total White, not Hispanic multi family - 5 or more",8,N,ACS,B25032H_6+B25032H_7+B25032H_8+B25032H_9
+1205,"Identifies Income Level Indicator (low, mod, mid, upper income areas)",1,N,Other,
+1206,"Meets current year's poverty CRA distressed criterion?  'X' - Yes , ' ' (blank space) - No",1,AN,Other,
+1207,"Meets current year's unemployment CRA distressed criterion?  'X' - Yes , ' ' (blank space) - No",1,AN,Other,
+1208,"Meets current year's population CRA distressed criterion?  'X' - Yes , ' ' (blank space) - No",1,AN,Other,
+1209,"Meets current year's remote rural (low density) CRA underserved criterion?  'X' -Yes, ' ' (blank space) - No",1,AN,Other,
+1210,"Meets at least one of the previous year's CRA distressed criteria?  'X' - Yes , ' ' (blank space) - No",1,AN,Other,
+1211,"Meets previous year's CRA underserved criterion?  'X' - Yes , ' ' (blank space) - No",1,AN,Other,
+1212,"Meets at least one of current or previous year's CRA distressed/underserved tract criteria?  'X' - Yes, ' ' (blank space) - No",1,AN,Other,
+1213,Total parent-in-law in family households,8,N,ACS,B09019_15
+1214,Total son-in-law or daughter-in-law in family households,8,N,ACS,B09019_16
+1215,"Total other relatives excluding parent-in-law, son-in-law and daughter-in-law in family households",8,N,ACS,B09019_17
+1216,Total parents-in-law in family households - 65 years and over,8,N,ACS,B09020_9
+1217,Total other relatives excluding parents-in-law in family households - 65 years and over,8,N,ACS,B09020_10
+1218,Housing Unit built 2014 or later,8,N,ACS,B25034_2
+1219,Housing Unit built 2010 to 2013,8,N,ACS,B25034_3
+1220,"Total renter-occupied housing unit with cash rent $2,000 to $2,499",8,N,ACS,B25063_23
+1221,"Total renter-occupied housing unit with cash rent $2,500 to $2,999",8,N,ACS,B25063_24
+1222,"Total renter-occupied housing unit with cash rent $3,000 to $3,499",8,N,ACS,B25063_25
+1223,"Total renter-occupied housing unit with cash rent $3,500 or more",8,N,ACS,B25063_26
+1224,"Renter-occupied housing unit with householder income less than $10,000 - 35.0 to 39.9 percent",8,N,ACS,B25074_7
+1225,"Renter -occupied housing unit with  householder income less than $10,000 - 40.0 to 49.9 percent",8,N,ACS,B25074_8
+1226,"Renter -occupied housing unit with  householder income less than $10,000 - 50.0 or more percent",8,N,ACS,B25074_9
+1227,"Renter -occupied housing unit with  householder income $10,000-$19,999 - 35.0 to 39.9 percent",8,N,ACS,B25074_16
+1228,"Renter -occupied housing unit with  householder income $10,000-$19,999 - 40.0 to 49.9 percent",8,N,ACS,B25074_17
+1229,"Renter -occupied housing unit with  householder income $10,000-$19,999 - 50.0 or more percent",8,N,ACS,B25074_18
+1230,"Renter -occupied housing unit with  householder income $20,000-$34,999 - 35.0 to 39.9 percent",8,N,ACS,B25074_25
+1231,"Renter -occupied housing unit with  householder income $20,000-$34,999 - 40.0 to 49.9 percent",8,N,ACS,B25074_26
+1232,"Renter -occupied housing unit with  householder income $20,000-$34,999 - 50.0 or more percent",8,N,ACS,B25074_27
+1233,"Renter -occupied housing unit with  householder income $35,000-$49,999 - 35.0 to 39.9 percent",8,N,ACS,B25074_34
+1234,"Renter -occupied housing unit with  householder income $35,000-$49,999 - 40.0 to 49.9 percent",8,N,ACS,B25074_35
+1235,"Renter -occupied housing unit with  householder income $35,000-$49,999 - 50.0 or more percent",8,N,ACS,B25074_36
+1236,"Renter -occupied housing unit with  householder income $50,000-$74,999 - 35.0 to 39.9 percent",8,N,ACS,B25074_43
+1237,"Renter -occupied housing unit with  householder income $50,000-$74,999 - 40.0 to 49.9 percent",8,N,ACS,B25074_44
+1238,"Renter -occupied housing unit with  householder income $50,000-$74,999 - 50.0 or more percent",8,N,ACS,B25074_45
+1239,"Renter -occupied housing unit with  householder income $75,000-$99,999 - 35.0 to 39.9 percent",8,N,ACS,B25074_52
+1240,"Renter -occupied housing unit with  householder income $75,000-$99,999 - 40.0 to 49.9 percent",8,N,ACS,B25074_53
+1241,"Renter -occupied housing unit with  householder income $75,000-$99,999 - 50.0 or more percent",8,N,ACS,B25074_54
+1242,"Renter -occupied housing unit with  householder income $100,000 or more - 35.0 to 39.9 percent",8,N,ACS,B25074_61
+1243,"Renter -occupied housing unit with  householder income $100,000 or more - 40.0 to 49.9 percent",8,N,ACS,B25074_62
+1244,"Renter -occupied housing unit with  householder income $100,000 or more - 50.0 or more percent",8,N,ACS,B25074_63
+1245,"Total owner occupied unit $1,000,000 to $1,499,999",8,N,ACS,B25075_25
+1246,"Total owner occupied unit $1,500,000 to $1,999,999",8,N,ACS,B25075_26
+1247,"Total owner occupied unit $2,000,000 or more",8,N,ACS,B25075_27
